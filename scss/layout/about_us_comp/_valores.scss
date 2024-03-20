@@ -1,0 +1,28 @@
+@use '../../utilities/' as *;
+
+.valores {
+	h3 {
+		font-size: rem(32px);
+		font-weight: 900;
+		margin-bottom: 16px;
+	}
+	p {
+		font-size: rem(20px);
+		// text-wrap: balance;
+	}
+	ul {
+		display: flex;
+		margin-top: 25px;
+		width: 100%;
+		flex-direction: column;
+		gap: 25px;
+	}
+	li {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		img {
+			grid-row: 1/-1;
+		}
+	}
+}

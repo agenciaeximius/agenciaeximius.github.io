@@ -1,0 +1,70 @@
+@use '../utilities/' as *;
+@use '../abstracts/' as *;
+
+.services {
+	height: 850px;
+	@include mq(sm) {
+		height: 770px;
+	}
+	padding-top: 40px;
+	.container {
+		@include mq(xxl) {
+			max-width: calc(1320px * 1.1);
+		}
+	}
+	.title {
+		margin-bottom: 40px;
+	}
+	nav {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 20px;
+		margin-bottom: 60px;
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	li {
+		cursor: pointer;
+		color: $white-unfocused;
+		@media only screen and (max-width: 990px) {
+			flex: 1;
+		}
+		&.active {
+			color: $white;
+		}
+	}
+
+	&--content {
+		display: flex;
+		justify-content: space-between;
+		gap: 70px;
+		align-items: center;
+		text-align: center;
+		@include mq(lg) {
+			text-align: left;
+		}
+		h2 {
+			font-size: rem(40px);
+			font-weight: 800;
+			color: $blue;
+			margin-bottom: 10px;
+			text-wrap: balance;
+		}
+		p {
+			font-size: rem(20px);
+			text-wrap: balance;
+		}
+		img {
+			display: none;
+			@include mq(lg) {
+				display: block;
+			}
+			max-width: 450px;
+		}
+	}
+}

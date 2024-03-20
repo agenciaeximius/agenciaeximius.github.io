@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+.header,
+section {
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: $black;
+}
+
+.header,
+.hero,
+.latim,
+.cta {
+	background-image: radial-gradient(59.31% 59.31% at 50% 50%, $blue 0%, $dark-blue 100%);
+}
+
+.contact_us {
+	background-color: $dark-blue;
+}

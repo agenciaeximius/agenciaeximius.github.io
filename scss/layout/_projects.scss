@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.projects {
+	padding: 55px 0 50px 0;
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+	}
+	.project {
+		max-width: 776px;
+		margin-inline: auto;
+		&--text-wrapper {
+			position: relative;
+			border: 5px solid $white;
+			border-top: none;
+			padding: 28px 75px;
+			@include mq(md) {
+				padding: 42px 151px;
+			}
+		}
+		&--title {
+			position: absolute;
+			font-size: rem(24px);
+			background-color: $blue;
+			top: -24px;
+			left: 0;
+			right: 0;
+			margin-inline: auto;
+			width: fit-content;
+			padding: 9px 28px;
+		}
+		&--text {
+			font-size: rem(22px);
+			font-weight: 500;
+			// text-wrap: balance;
+			text-align: center;
+		}
+	}
+}

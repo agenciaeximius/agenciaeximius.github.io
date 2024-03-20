@@ -1,0 +1,22 @@
+@use '../utilities/' as *;
+
+.container {
+	margin-inline: auto;
+	max-width: 95%;
+
+	@include mq(sm) {
+		max-width: 540px;
+	}
+	@include mq(md) {
+		max-width: 720px;
+	}
+	@include mq(lg) {
+		max-width: 960px;
+	}
+	@include mq(xl) {
+		max-width: 1140px;
+	}
+	@include mq(xxl) {
+		max-width: 1320px;
+	}
+}

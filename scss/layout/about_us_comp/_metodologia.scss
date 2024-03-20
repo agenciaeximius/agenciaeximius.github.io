@@ -1,0 +1,33 @@
+@use '../../utilities/' as *;
+@use '../../abstracts/' as *;
+
+.metodologia {
+	h3 {
+		font-size: rem(32px);
+		font-weight: 900;
+		margin-bottom: 16px;
+	}
+	div > p {
+		font-size: rem(20px);
+	}
+	ul {
+		display: flex;
+		margin-top: 25px;
+		width: 100%;
+		flex-direction: column;
+		gap: 25px;
+	}
+	li {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		& > p {
+			-webkit-text-stroke-width: 1.5px;
+			min-width: 75px;
+			-webkit-text-stroke-color: $light-gray;
+			font-size: rem(72px);
+			font-weight: 900;
+			color: $black;
+		}
+	}
+}

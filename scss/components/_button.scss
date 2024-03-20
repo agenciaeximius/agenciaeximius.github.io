@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+
+.button {
+	min-height: 50px;
+	padding-inline: 23px;
+	background-color: $blue;
+	color: $white;
+	border: 3px solid $white;
+}
