@@ -2,7 +2,7 @@
 
 .container {
 	margin-inline: auto;
-	max-width: 95%;
+	max-width: 90%;
 
 	@include mq(sm) {
 		max-width: 540px;

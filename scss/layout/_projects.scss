@@ -15,7 +15,10 @@
 			position: relative;
 			border: 5px solid $white;
 			border-top: none;
-			padding: 28px 75px;
+			padding: 28px 56px;
+			@include mq(sm) {
+				padding: 28px 78px;
+			}
 			@include mq(md) {
 				padding: 42px 151px;
 			}

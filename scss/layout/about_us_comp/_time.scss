@@ -8,6 +8,13 @@ $size-md: 220px;
 	// width: 100%;
 	height: calc($size-md + 85px + 35px);
 	position: relative;
+	@media only screen and (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		align-items: center;
+		height: 100%;
+	}
 	@include mq(lg) {
 		height: calc($size-lg + 85px + 35px);
 	}
@@ -31,6 +38,9 @@ $size-md: 220px;
 			letter-spacing: 5.6px;
 			font-weight: 600;
 			font-size: rem(16px);
+		}
+		@media only screen and (max-width: 500px) {
+			position: initial;
 		}
 	}
 	.img-container {

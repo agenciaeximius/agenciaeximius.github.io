@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+select {
+	background: $black;
+	outline: none;
+	border: 3px solid $white;
+	padding: 11px;
+	color: $white;
+	width: inherit;
+}

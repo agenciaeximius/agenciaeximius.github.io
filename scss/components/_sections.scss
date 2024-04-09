@@ -10,11 +10,15 @@ section {
 	background-color: $black;
 }
 
-.header,
-.hero,
+.parallax,
 .latim,
 .cta {
 	background-image: radial-gradient(59.31% 59.31% at 50% 50%, $blue 0%, $dark-blue 100%);
+}
+
+.hero,
+.header {
+	background-color: transparent;
 }
 
 .contact_us {

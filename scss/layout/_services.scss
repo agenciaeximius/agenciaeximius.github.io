@@ -2,9 +2,11 @@
 @use '../abstracts/' as *;
 
 .services {
-	height: 850px;
-	@include mq(sm) {
+	height: 100%;
+	padding-bottom: 150px;
+	@include mq(lg) {
 		height: 770px;
+		padding-bottom: 0;
 	}
 	padding-top: 40px;
 	.container {
@@ -22,8 +24,17 @@
 		gap: 20px;
 		margin-bottom: 60px;
 	}
+	select {
+		display: block;
+		@include mq(lg) {
+			display: none;
+		}
+	}
 	ul {
-		display: flex;
+		display: none;
+		@include mq(lg) {
+			display: flex;
+		}
 		justify-content: space-between;
 		gap: 20px;
 		flex-wrap: wrap;
@@ -45,8 +56,10 @@
 		gap: 70px;
 		align-items: center;
 		text-align: center;
+		flex-direction: column;
 		@include mq(lg) {
 			text-align: left;
+			flex-direction: row;
 		}
 		h2 {
 			font-size: rem(40px);
@@ -60,11 +73,10 @@
 			text-wrap: balance;
 		}
 		img {
-			display: none;
+			display: block;
 			@include mq(lg) {
-				display: block;
+				max-width: 450px;
 			}
-			max-width: 450px;
 		}
 	}
 }

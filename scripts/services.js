@@ -1,5 +1,6 @@
 let contentDiv = document.querySelector('.services--content');
 let btns = document.querySelectorAll('.services_btn');
+let select = document.querySelector('.services--menu');
 
 function removeActive() {
 	btns.forEach((btn) => {
@@ -14,7 +15,20 @@ btns.forEach((btn) => {
 		let type = btn.dataset.btn;
 		changeContent(type);
 
+		select.value = type;
 		btn.classList.add('active');
+	});
+});
+
+select.addEventListener('change', () => {
+	changeContent(select.value);
+
+	btns.forEach((btn) => {
+		let type = btn.dataset.btn;
+		if (type == select.value) {
+			removeActive();
+			btn.classList.add('active');
+		}
 	});
 });
 
@@ -46,7 +60,9 @@ function changeContent(tag) {
 			content = `
             <div>
                 <h2>Tenha uma identidade visual única, marcante e inovadora</h2>
-                <p>Na era digital, ter um site é muito relevante para garantir a presença virtual de seu negócio, a fim de se destacar com profissionalismo, gerar credibilidade e conquistar mais clientes.</p>
+                <p>É por meio da identidade visual que são transmitidos
+				os valores e propósitos de uma marca, sendo indispensável
+				para qualquer negócio que busque alcançar o sucesso.</p>
 			</div>
             <img src="./assets/servicos/identidade.svg" alt="" />
             `;
@@ -91,7 +107,7 @@ function changeContent(tag) {
 			content = `
             <div>
                 <h2>Excelência em UI/UX Design que vai além da estética</h2>
-                <p>Desperte a excelência em sua plataforma com nosso expertise em UI e UX Design. Oferecemos soluções digitais que vão além da estética, proporcionando experiências intuitivas e envolventes para seus usuários.</p>
+                <p>Desperte a excelência em sua plataforma com nosso expertise em UI e UX Design, uma vez que oferecemos soluções digitais que vão além da estética, proporcionando experiências intuitivas e envolventes para seus usuários.</p>
 			</div>
             <img src="./assets/servicos/ux.svg" alt="" />
             `;

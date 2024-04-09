@@ -1,0 +1,22 @@
+@use '../utilities/' as *;
+
+.header {
+	--speed: -2;
+	z-index: 10;
+}
+
+.hero {
+	--speed: 5;
+	z-index: 10;
+}
+
+.parallax > * {
+	animation: parallax linear;
+	animation-timeline: scroll();
+}
+
+@keyframes parallax {
+	to {
+		transform: translateY(calc(var(--speed) * 200px));
+	}
+}

@@ -24,5 +24,8 @@
 		@include mq(lg) {
 			gap: 25px 75px;
 		}
+		@include mq(xl) {
+			grid-template-columns: repeat(5, 80px);
+		}
 	}
 }

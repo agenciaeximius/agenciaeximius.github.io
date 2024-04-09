@@ -11,7 +11,11 @@
 	.title {
 		margin-bottom: 33px;
 	}
-	aside {
+	&--aside {
+		display: none;
+		@include mq(md) {
+			display: block;
+		}
 		border-left: 7px solid $white;
 		padding: 25px 0px 25px 15px;
 		@include mq(sm) {
@@ -47,6 +51,12 @@
 				justify-content: unset;
 				gap: 25px;
 			}
+		}
+	}
+	&--menu {
+		width: 100%;
+		@include mq(md) {
+			display: none;
 		}
 	}
 	h2 {
