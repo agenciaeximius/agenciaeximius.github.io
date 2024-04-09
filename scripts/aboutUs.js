@@ -1,5 +1,6 @@
 let contentDiv = document.querySelector('.about--content');
 let btns = document.querySelectorAll('.about--btn');
+let select = document.querySelector('.about--select');
 
 function removeActive() {
 	btns.forEach((btn) => {
@@ -14,7 +15,20 @@ btns.forEach((btn) => {
 		let type = btn.dataset.btn;
 		changeContent(type);
 
+		select.value = type;
 		btn.classList.add('active');
+	});
+});
+
+select.addEventListener('change', () => {
+	changeContent(select.value);
+
+	btns.forEach((btn) => {
+		let type = btn.dataset.btn;
+		if (type == select.value) {
+			removeActive();
+			btn.classList.add('active');
+		}
 	});
 });
 

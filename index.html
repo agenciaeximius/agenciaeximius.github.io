@@ -8,39 +8,41 @@
 		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-		<header class="header">
-			<nav class="container header--nav" aria-describedby="Navegação do cabeçalho">
-				<ul class="header--list">
-					<li><a href="#home" class="header--link header--home">Home</a></li>
-					<li><a href="#about" class="header--link header--about_us">Sobre nós</a></li>
-					<li><a href="#services" class="header--link header--services">Serviços</a></li>
-				</ul>
+		<div class="parallax">
+			<header class="header">
+				<nav class="container header--nav" aria-describedby="Navegação do cabeçalho">
+					<ul class="header--list">
+						<li><a href="#home" class="header--link header--home">Home</a></li>
+						<li><a href="#about" class="header--link header--about_us">Sobre nós</a></li>
+						<li><a href="#services" class="header--link header--services">Serviços</a></li>
+					</ul>
 
-				<img src="./assets/logo.png" class="header--logo" alt="" />
+					<img src="./assets/logo.png" class="header--logo" alt="" />
 
-				<ul class="header--list">
-					<li><a href="#projects" class="header--link header--projetcs">Projetos</a></li>
-					<li><a href="#contact" class="header--link header--contact button">Fale conosco</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<section class="hero" id="home">
-			<div class="container hero--container">
-				<h1 class="title hero--title">
-					Te ajudamos a se destacar no
-					<div class="hero--highlight">mundo digital.</div>
-				</h1>
-				<img src="./assets/saly.png" class="hero--img" alt="" />
-			</div>
-		</section>
+					<ul class="header--list">
+						<li><a href="#projects" class="header--link header--projetcs">Projetos</a></li>
+						<li><a href="#contact" class="header--link header--contact button">Fale conosco</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="hero" id="home">
+				<div class="container hero--container">
+					<h1 class="title hero--title">
+						Te ajudamos a se destacar no
+						<div class="hero--highlight">mundo digital.</div>
+					</h1>
+					<img src="./assets/saly.png" class="hero--img" alt="" />
+				</div>
+			</section>
+			<a class="down" href="#about"><span></span></a>
+		</div>
 
 		<section class="about" id="about">
 			<div class="container">
 				<p class="uppercase subtitle">Conheça a Eximius</p>
 				<h1 class="title">Sobre nós</h1>
 				<article>
-					<aside>
+					<aside class="about--aside">
 						<nav>
 							<ul>
 								<li class="about--btn" data-btn="time">Time</li>
@@ -50,6 +52,14 @@
 							</ul>
 						</nav>
 					</aside>
+					<nav class="about--menu">
+						<select class="about--select">
+							<option value="time">Time</option>
+							<option value="valores">Valores</option>
+							<option value="segmentos">Segmentos</option>
+							<option value="metodologia">Metodologia</option>
+						</select>
+					</nav>
 
 					<div class="about--content"></div>
 				</article>
@@ -57,10 +67,12 @@
 		</section>
 
 		<section class="latim">
-			<p class="uppercase subtitle">Do latim</p>
-			<h1 class="latim--title">Eximius.</h1>
-			<p class="latim--adj">Adjetivo — Sentido próprio</p>
-			<p class="latim--sig">Excelente, superior, notável, sem igual, raro.</p>
+			<div class="container">
+				<p class="uppercase subtitle">Do latim</p>
+				<h1 class="latim--title">Eximius.</h1>
+				<p class="latim--adj">Adjetivo — Sentido próprio</p>
+				<p class="latim--sig">Excelente, superior, notável, sem igual, raro.</p>
+			</div>
 		</section>
 
 		<section class="services" id="services">
@@ -68,6 +80,16 @@
 				<p class="uppercase subtitle">O que fazemos</p>
 				<h1 class="title">Serviços</h1>
 				<nav>
+					<select class="services--menu">
+						<option value="site">Criação de websites</option>
+						<option value="social-media">Social Media design</option>
+						<option value="identidade">Identidade visual</option>
+						<option value="cartao">Cartão de visita digital</option>
+						<option value="ppt">Powerpoint profissional</option>
+						<option value="cardapio">Cardápio digital</option>
+						<option value="artes">Artes de divulgação</option>
+						<option value="ux">UI/UX Design</option>
+					</select>
 					<ul>
 						<li class="services_btn" data-btn="site">Criação de websites</li>
 						<li class="services_btn" data-btn="social-media">Social Media design</li>
@@ -87,10 +109,12 @@
 		</section>
 
 		<section class="cta">
-			<p class="uppercase subtitle">Tecnologia a serviço da inovação</p>
-			<h1 class="title">Design impactante, projetos envolventes</h1>
-			<p class="cta--desc">Fale conosco e comece a agregar valor a seu negócio com uma presença digital marcante.</p>
-			<a href="#contato" class="uppercase">Fale conosco</a>
+			<div class="container">
+				<p class="uppercase subtitle">Tecnologia a serviço da inovação</p>
+				<h1 class="title">Design impactante, projetos envolventes</h1>
+				<p class="cta--desc">Fale conosco e comece a agregar valor a seu negócio com uma presença digital marcante.</p>
+				<a href="#contato" class="uppercase">Fale conosco</a>
+			</div>
 		</section>
 
 		<section class="projects" id="projects">
