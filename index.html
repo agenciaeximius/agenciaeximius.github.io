@@ -6,6 +6,7 @@
 		<title>Eximius</title>
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</head>
 	<body>
 		<div class="parallax">
@@ -172,7 +173,7 @@
 					</ul>
 				</div>
 
-				<form action="" class="contact_us--form">
+				<form class="contact_us--form">
 					<label for="name">Nome completo:</label>
 					<input class="contact_us--input" type="text" name="name" id="name" />
 					<label for="email">E-mail:</label>
@@ -224,5 +225,30 @@
 		</footer>
 
 		<script type="module" src="./scripts/main.js"></script>
+		<script type="text/javascript">
+			let form = document.querySelector('form');
+
+			function sendEmail({ target, ...rest }) {
+				let [name, email, tel, msg] = target;
+				Email.send({
+					SecureToken: '68230692-040a-4f9d-8d56-f7fb0542bf77',
+					To: 'eximiusdesign.agencia@gmail.com',
+					From: 'eximiusdesign.agencia@gmail.com',
+					Subject: `Contato de ${name.value}`,
+					Body: `
+					Nome do usuário: ${name.value}\n
+					E-mail do usuário: ${email.value}\n
+					Telefone/WhatsApp do usuário: ${tel.value}\n
+					Mensagem:\n
+					${msg.value}
+					`,
+				}).then((message) => alert(message));
+			}
+
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				sendEmail(e);
+			});
+		</script>
 	</body>
 </html>
