@@ -30,11 +30,11 @@
 			position: absolute;
 			max-width: 14ch;
 			font-size: rem(35px);
-			top: 80px;
+			top: 60px;
 		}
 		@include mq(lg) {
 			font-size: rem(40px);
-			top: 170px;
+			top: 120px;
 		}
 		@include mq(xl) {
 			font-size: rem(48px);
