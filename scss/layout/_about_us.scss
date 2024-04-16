@@ -5,7 +5,7 @@
 .about {
 	padding: 50px 0 60px 0;
 	@include mq(xl) {
-		height: 880px;
+		height: 930px;
 		padding-bottom: 0;
 	}
 	.title {
@@ -63,7 +63,7 @@
 		color: $blue;
 		font-size: rem(32px);
 		font-weight: 800;
-		margin-bottom: 17px;
+		margin-bottom: 27px;
 	}
 	article {
 		display: flex;
@@ -71,7 +71,8 @@
 		flex-direction: column;
 		.about--content > p {
 			font-size: rem(20px);
-			margin-bottom: 25px;
+			margin-bottom: 45px;
+			text-wrap: balance;
 		}
 		@include mq(md) {
 			flex-direction: row;
