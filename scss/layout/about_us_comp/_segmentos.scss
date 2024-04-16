@@ -20,13 +20,13 @@
 	ul {
 		display: grid;
 		// max-width: 855px;
-		grid-template-columns: repeat(auto-fit, 80px);
+		grid-template-columns: repeat(auto-fit, 100px);
 		gap: 25px 30px;
 		@include mq(lg) {
 			gap: 25px 75px;
 		}
 		@include mq(xl) {
-			grid-template-columns: repeat(4, 80px);
+			grid-template-columns: repeat(4, 100px);
 		}
 	}
 }
