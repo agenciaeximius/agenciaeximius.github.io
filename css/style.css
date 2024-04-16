@@ -538,7 +538,7 @@ select {
 }
 @media only screen and (min-width: 1200px) {
   .segmentos ul {
-    grid-template-columns: repeat(5, 80px);
+    grid-template-columns: repeat(4, 80px);
   }
 }
 
