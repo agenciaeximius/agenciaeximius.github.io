@@ -59,14 +59,17 @@
 	}
 
 	&--content {
-		display: grid;
-		grid-template-columns: auto 70px 450px;
+		display: flex;
 		align-items: center;
 		text-align: center;
 		flex-direction: column;
+		gap: 70px;
 		@include mq(lg) {
 			text-align: left;
+			display: grid;
+			grid-template-columns: auto 70px 450px;
 			flex-direction: row;
+			gap: 0;
 		}
 		h2 {
 			font-size: rem(40px);
