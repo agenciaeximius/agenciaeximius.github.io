@@ -25,7 +25,7 @@
 			gap: 25px 75px;
 		}
 		@include mq(xl) {
-			grid-template-columns: repeat(5, 80px);
+			grid-template-columns: repeat(4, 80px);
 		}
 	}
 }
