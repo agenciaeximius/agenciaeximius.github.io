@@ -190,7 +190,7 @@
 						</li>
 						<li>
 							<img src="./assets/email.svg" alt="" />
-							<a href="mailto:eximiusdesign.agencia@gmail.com">eximiusdesign.agencia@gmail.com </a>
+							<a href="mailto:agencia@eximiusdesign.com.br">agencia@eximiusdesign.com.br </a>
 						</li>
 						<li>
 							<img src="./assets/insta.svg" alt="" />
@@ -238,7 +238,7 @@
 							</li>
 							<li>
 								<img src="./assets/email.svg" alt="" />
-								<a href="mailto:eximiusdesign.agencia@gmail.com">eximiusdesign.agencia@gmail.com </a>
+								<a href="mailto:agencia@eximiusdesign.com.br">agencia@eximiusdesign.com.br</a>
 							</li>
 							<li>
 								<img src="./assets/insta.svg" alt="" />
@@ -258,17 +258,17 @@
 				let [name, email, tel, msg] = target;
 				Email.send({
 					SecureToken: '68230692-040a-4f9d-8d56-f7fb0542bf77',
-					To: 'eximiusdesign.agencia@gmail.com',
-					From: 'eximiusdesign.agencia@gmail.com',
+					To: 'agencia@eximiusdesign.com.br',
+					From: 'agencia@eximiusdesign.com.br',
 					Subject: `Contato de ${name.value}`,
 					Body: `
-					Nome do usuário: ${name.value}\n
-					E-mail do usuário: ${email.value}\n
-					Telefone/WhatsApp do usuário: ${tel.value}\n
-					Mensagem:\n
+					Nome do usuário: ${name.value}<br />
+					E-mail do usuário: ${email.value}<br />
+					Telefone/WhatsApp do usuário: ${tel.value}<br />
+					Mensagem:<br />
 					${msg.value}
 					`,
-				}).then((message) => alert(message));
+				}).then(() => alert('E-mail enviado! Logo entraremos em contato.'));
 			}
 
 			form.addEventListener('submit', (e) => {

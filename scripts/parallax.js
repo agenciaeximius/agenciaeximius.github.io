@@ -1,7 +1,7 @@
 let hero = document.querySelector('.hero');
 
 function set() {
-	hero.style.setProperty('--speed', window.innerHeight / 184);
+	hero.style.setProperty('--speed', window.innerHeight / 210);
 }
 
 set();

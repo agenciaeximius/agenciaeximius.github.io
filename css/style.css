@@ -501,7 +501,7 @@ select {
   margin-top: 25px;
   width: 100%;
   flex-direction: column;
-  gap: 25px;
+  gap: 45px;
 }
 .valores li {
   display: flex;
@@ -525,6 +525,7 @@ select {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  font-size: 1.25rem;
 }
 .segmentos ul {
   display: grid;
@@ -576,7 +577,7 @@ select {
 }
 @media only screen and (min-width: 1200px) {
   .about {
-    height: 880px;
+    height: 930px;
     padding-bottom: 0;
   }
 }
@@ -649,7 +650,7 @@ select {
   color: #0020fb;
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 17px;
+  margin-bottom: 27px;
 }
 .about article {
   display: flex;
@@ -658,7 +659,8 @@ select {
 }
 .about article .about--content > p {
   font-size: 1.25rem;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
+  text-wrap: balance;
 }
 @media only screen and (min-width: 768px) {
   .about article {

@@ -46,7 +46,7 @@ function changeContent(tag) {
 			<div class="time">
 				<div class="fig">
 					<div class="img-container">
-						<img src="https://images.unsplash.com/photo-1594751684241-bcef815d5a57?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto de Vinícius Davi" />					
+						<img src="https://imgur.com/9ZSgH5M.png" alt="Foto de Vinícius Davi" />					
 					</div>
 					<p>Vinícius Davi</p>
 				</div>
