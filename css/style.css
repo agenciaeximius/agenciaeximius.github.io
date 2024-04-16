@@ -529,7 +529,7 @@ select {
 }
 .segmentos ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 80px);
+  grid-template-columns: repeat(auto-fit, 100px);
   gap: 25px 30px;
 }
 @media only screen and (min-width: 992px) {
@@ -539,7 +539,7 @@ select {
 }
 @media only screen and (min-width: 1200px) {
   .segmentos ul {
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(4, 100px);
   }
 }
 
