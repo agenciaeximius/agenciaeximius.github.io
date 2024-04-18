@@ -44,9 +44,8 @@
 		@include mq(md) {
 			display: block;
 			max-height: 100%;
-		}
-		@include mq(xl) {
-			max-width: 510px;
+			max-width: 500px;
+			width: 100%;
 		}
 		@include mq(xxl) {
 			max-width: 640px;
