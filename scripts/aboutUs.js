@@ -46,13 +46,13 @@ function changeContent(tag) {
 			<div class="time">
 				<div class="fig">
 					<div class="img-container">
-						<img src="https://imgur.com/9ZSgH5M.png" alt="Foto de Vinícius Davi" />					
+						<img src="https://i.imgur.com/CyDd9dV.jpeg" alt="Foto de Vinícius Davi" />					
 					</div>
 					<p>Vinícius Davi</p>
 				</div>
 				<div class="fig">
 					<div class="img-container">
-						<img src="https://images.unsplash.com/photo-1598198414976-ddb788ec80c1?q=80&w=2779&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto de Igor Marinho" />
+						<img src="https://i.imgur.com/7RvxtJo.jpeg" alt="Foto de Igor Marinho" />
 					</div>
 					<p>Igor Marinho</p>
 				</div>
