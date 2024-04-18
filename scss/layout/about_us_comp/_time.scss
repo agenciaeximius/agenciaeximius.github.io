@@ -46,16 +46,16 @@ $size-md: 200px;
 		position: relative;
 		overflow: hidden;
 		height: $size-md;
+		aspect-ratio: 1;
+		margin-bottom: 15px;
+
 		@include mq(lg) {
 			height: $size-lg;
 		}
-		aspect-ratio: 1;
-		margin-bottom: 15px;
 	}
 	img {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0;
 		width: $size-lg;
 		height: auto;
 		display: block;

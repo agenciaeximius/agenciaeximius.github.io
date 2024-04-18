@@ -43,3 +43,16 @@ img {
 	height: auto;
 	display: block;
 }
+
+::-webkit-scrollbar {
+	width: 16px;
+}
+
+::-webkit-scrollbar-track {
+	background: $light-gray;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $blue;
+	// border-bottom: 100vh solid #43a047;
+}
