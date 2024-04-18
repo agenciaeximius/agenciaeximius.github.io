@@ -402,7 +402,7 @@ select {
 }
 @media only screen and (min-width: 1200px) {
   .hero--img {
-    max-width: 580px;
+    max-width: 510px;
   }
 }
 @media only screen and (min-width: 1400px) {
