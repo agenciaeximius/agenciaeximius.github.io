@@ -16,17 +16,13 @@
 		align-items: center;
 		gap: 15px;
 		font-size: rem(20px);
+		width: 120px;
 	}
 	ul {
-		display: grid;
-		// max-width: 855px;
-		grid-template-columns: repeat(auto-fit, 100px);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 570px;
 		gap: 25px 30px;
-		@include mq(lg) {
-			gap: 25px 75px;
-		}
-		@include mq(xl) {
-			grid-template-columns: repeat(4, 100px);
-		}
 	}
 }

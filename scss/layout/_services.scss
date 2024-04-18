@@ -61,7 +61,6 @@
 	&--content {
 		display: flex;
 		align-items: center;
-		text-align: center;
 		flex-direction: column;
 		gap: 70px;
 		@include mq(lg) {

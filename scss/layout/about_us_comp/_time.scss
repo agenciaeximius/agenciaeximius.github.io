@@ -1,8 +1,8 @@
 @use '../../abstracts/' as *;
 @use '../../utilities/' as *;
 
-$size-lg: 378px;
-$size-md: 220px;
+$size-lg: 350px;
+$size-md: 200px;
 
 .time {
 	// width: 100%;
@@ -57,7 +57,7 @@ $size-md: 220px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		width: 378px;
+		width: $size-lg;
 		height: auto;
 		display: block;
 	}

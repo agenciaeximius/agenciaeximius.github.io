@@ -2,9 +2,9 @@
 @use '../utilities/' as *;
 
 .hero {
-	padding: 100px 0 50px 0;
+	padding: 50px 0 50px 0;
 	// min-height: 400px;
-	height: calc(100vh - 128px);
+	height: calc(100dvh - 128px);
 	display: flex;
 	align-items: center;
 	&--container {
@@ -62,6 +62,7 @@
 		border: 5px solid $dark-blue;
 		width: fit-content;
 		margin-inline: auto;
+		transform: translateY(-5px);
 		@include mq(md) {
 			margin: 0;
 		}

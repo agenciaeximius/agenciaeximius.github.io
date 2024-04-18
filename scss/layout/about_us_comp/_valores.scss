@@ -2,13 +2,16 @@
 
 .valores {
 	h3 {
-		font-size: rem(32px);
+		font-size: rem(26px);
 		font-weight: 900;
 		margin-bottom: 16px;
+		@include mq(sm) {
+			font-size: rem(32px);
+		}
 	}
 	p {
 		font-size: rem(20px);
-		// text-wrap: balance;
+		text-wrap: balance;
 	}
 	ul {
 		display: flex;
@@ -20,9 +23,15 @@
 	li {
 		display: flex;
 		align-items: center;
-		gap: 40px;
+		gap: 15px;
+		@include mq(sm) {
+			gap: 40px;
+		}
 		img {
-			grid-row: 1/-1;
+			max-width: 50px;
+			@include mq(sm) {
+				max-width: 100%;
+			}
 		}
 	}
 }
