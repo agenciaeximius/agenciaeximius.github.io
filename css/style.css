@@ -398,11 +398,8 @@ select {
   .hero--img {
     display: block;
     max-height: 100%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .hero--img {
-    max-width: 510px;
+    max-width: 500px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1400px) {
