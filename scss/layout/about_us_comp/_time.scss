@@ -5,7 +5,6 @@ $size-lg: 350px;
 $size-md: 200px;
 
 .time {
-	// width: 100%;
 	height: calc($size-md + 85px + 35px);
 	position: relative;
 	@media only screen and (max-width: 500px) {
