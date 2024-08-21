@@ -3,7 +3,7 @@
 .valores {
 	h3 {
 		font-size: rem(26px);
-		font-weight: 900;
+		font-weight: 600;
 		margin-bottom: 16px;
 		@include mq(sm) {
 			font-size: rem(32px);
@@ -12,6 +12,7 @@
 	p {
 		font-size: rem(20px);
 		text-wrap: balance;
+		font-weight: 600;
 	}
 	ul {
 		display: flex;

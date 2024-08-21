@@ -13,6 +13,7 @@
 	}
 	&--aside {
 		display: none;
+		font-weight: 600;
 		@include mq(md) {
 			display: block;
 		}
@@ -62,7 +63,7 @@
 	h2 {
 		color: $blue;
 		font-size: rem(32px);
-		font-weight: 800;
+		font-weight: 700;
 		margin-bottom: 27px;
 	}
 	article {

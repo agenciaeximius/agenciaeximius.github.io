@@ -13,8 +13,6 @@
 		margin-inline: auto;
 		&--text-wrapper {
 			position: relative;
-			border: 5px solid $white;
-			border-top: none;
 			padding: 28px 56px;
 			@include mq(sm) {
 				padding: 28px 78px;
@@ -25,14 +23,17 @@
 		}
 		&--title {
 			position: absolute;
-			font-size: rem(24px);
-			background-color: $blue;
+			font-size: rem(22px);
+			font-weight: 600;
+			background: linear-gradient(90deg, $blue 0%, $dark-blue-1 100%);
+			width: 264px;
 			top: -24px;
 			left: 0;
 			right: 0;
 			margin-inline: auto;
-			width: fit-content;
-			padding: 9px 28px;
+			text-align: center;
+			// width: fit-content;
+			padding-block: 10px;
 		}
 		&--text {
 			font-size: rem(22px);

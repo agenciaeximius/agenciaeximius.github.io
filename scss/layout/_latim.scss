@@ -4,6 +4,7 @@
 .latim {
 	text-align: center;
 	padding-block: 50px;
+	color: $black;
 	.subtitle {
 		margin-bottom: 0;
 	}
@@ -13,6 +14,7 @@
 		font-optical-sizing: auto;
 		font-weight: 700;
 		font-style: italic;
+		color: $blue;
 		margin-bottom: 22px;
 	}
 
@@ -22,7 +24,7 @@
 		margin-bottom: 5px;
 	}
 	&--sig {
-		font-weight: 800;
+		font-weight: 700;
 		font-size: rem(24px);
 	}
 }
