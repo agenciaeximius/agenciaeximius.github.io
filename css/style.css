@@ -4,7 +4,7 @@ body {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 * {
@@ -90,6 +90,7 @@ li {
 .header {
   background-color: transparent;
   border-bottom: 3px solid #ffffff;
+  font-weight: 600;
 }
 .header--nav {
   display: flex;
@@ -180,19 +181,21 @@ li {
 .contact_us--input {
   background: transparent;
   outline: none;
-  border: 3px solid #ffffff;
+  border: 3px solid #bfbfbf;
   padding: 11px;
-  color: #ffffff;
+  color: #050505;
   margin-bottom: 26px;
   width: inherit;
 }
 
 .button {
+  display: block;
+  width: fit-content;
   min-height: 50px;
-  padding-inline: 23px;
-  background-color: #0020fb;
+  font-weight: 600;
+  padding: 15px 23px;
+  background: linear-gradient(90deg, #0020fb 0%, #001395 100%);
   color: #ffffff;
-  border: 3px solid #ffffff;
 }
 
 .header,
@@ -205,19 +208,19 @@ section {
   background-color: #050505;
 }
 
-.parallax,
-.latim,
-.cta {
+.parallax {
   background-image: radial-gradient(59.31% 59.31% at 50% 50%, #0020fb 0%, #1b2031 100%);
+}
+
+.latim,
+.cta,
+.contact_us {
+  background-color: #e2e2e2;
 }
 
 .hero,
 .header {
   background-color: transparent;
-}
-
-.contact_us {
-  background-color: #1b2031;
 }
 
 .container {
@@ -377,12 +380,14 @@ select {
   }
 }
 .hero--title {
-  position: initial;
   text-align: center;
   font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 50px;
 }
 @media only screen and (min-width: 768px) {
   .hero--title {
+    margin-bottom: 0px;
     text-align: initial;
     position: absolute;
     max-width: 14ch;
@@ -429,6 +434,25 @@ select {
 @media only screen and (min-width: 768px) {
   .hero--highlight {
     margin: 0;
+  }
+}
+.hero--btn {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 0) {
+  .hero--btn {
+    margin-inline: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero--btn {
+    position: absolute;
+    top: 280px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero--btn {
+    top: 366px;
   }
 }
 
@@ -499,7 +523,7 @@ select {
 
 .valores h3 {
   font-size: 1.625rem;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 @media only screen and (min-width: 576px) {
@@ -510,6 +534,7 @@ select {
 .valores p {
   font-size: 1.25rem;
   text-wrap: balance;
+  font-weight: 600;
 }
 .valores ul {
   display: flex;
@@ -563,7 +588,7 @@ select {
 
 .metodologia h3 {
   font-size: 1.75rem;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 @media only screen and (min-width: 576px) {
@@ -629,6 +654,7 @@ select {
 }
 .about--aside {
   display: none;
+  font-weight: 600;
   border-left: 7px solid #ffffff;
   padding: 25px 0px 25px 15px;
   width: 100%;
@@ -692,7 +718,7 @@ select {
 .about h2 {
   color: #0020fb;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 27px;
 }
 .about article {
@@ -714,6 +740,7 @@ select {
 .latim {
   text-align: center;
   padding-block: 50px;
+  color: #050505;
 }
 .latim .subtitle {
   margin-bottom: 0;
@@ -724,6 +751,7 @@ select {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: italic;
+  color: #0020fb;
   margin-bottom: 22px;
 }
 .latim--adj {
@@ -732,7 +760,7 @@ select {
   margin-bottom: 5px;
 }
 .latim--sig {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 
@@ -781,6 +809,7 @@ select {
 .services li {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
   display: flex;
   flex: 0 0 33.3333%;
   align-items: center;
@@ -818,7 +847,7 @@ select {
 }
 .services--content h2 {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #0020fb;
   margin-bottom: 10px;
   text-wrap: balance;
@@ -840,28 +869,23 @@ select {
 .cta {
   text-align: center;
   padding-block: 50px;
+  color: #050505;
 }
 .cta .title {
   max-width: 20ch;
   display: inline-block;
   margin: 20px 0 32px 0;
+  color: #0020fb;
 }
 .cta--desc {
   font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 35px;
 }
 .cta a {
-  font-family: "Montserrat";
-  display: flex;
-  align-items: center;
-  width: fit-content;
   margin-inline: auto;
-  margin-top: 37px;
-  font-size: 1.25rem;
-  min-height: 50px;
-  padding-inline: 23px;
-  background-color: #1b2031;
-  color: #ffffff;
-  border: 3px solid #e2e2e2;
+  padding: 10px 23px;
+  min-height: auto;
 }
 
 .projects {
@@ -878,8 +902,6 @@ select {
 }
 .projects .project--text-wrapper {
   position: relative;
-  border: 5px solid #ffffff;
-  border-top: none;
   padding: 28px 56px;
 }
 @media only screen and (min-width: 576px) {
@@ -894,14 +916,16 @@ select {
 }
 .projects .project--title {
   position: absolute;
-  font-size: 1.5rem;
-  background-color: #0020fb;
+  font-size: 1.375rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #0020fb 0%, #001395 100%);
+  width: 264px;
   top: -24px;
   left: 0;
   right: 0;
   margin-inline: auto;
-  width: fit-content;
-  padding: 9px 28px;
+  text-align: center;
+  padding-block: 10px;
 }
 .projects .project--text {
   font-size: 1.375rem;
@@ -911,13 +935,13 @@ select {
 
 .contact_us {
   padding-top: 55px;
+  color: #050505;
 }
 .contact_us .title {
   margin-bottom: 35px;
 }
 .contact_us--info {
   margin-inline: auto;
-  font-weight: 500;
   display: flex;
   flex-direction: column;
 }
@@ -950,7 +974,7 @@ select {
   display: block;
   width: 100%;
   height: 6px;
-  background-color: #0020fb;
+  background: linear-gradient(180deg, #e2e2e2 0%, #050505 50%, #e2e2e2 100%);
   margin: 39px auto 0 auto;
 }
 @media only screen and (min-width: 992px) {
@@ -1012,6 +1036,7 @@ select {
 .contact_us form label {
   display: inline-block;
   margin-bottom: 11px;
+  font-size: 1.375rem;
 }
 .contact_us form textarea {
   resize: vertical;
