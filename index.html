@@ -4,14 +4,53 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Eximius Design</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" />
 		<style>
 			@font-face {
-				font-family: Monument Extended;
+				font-family: 'Montserrat';
+				font-weight: 400;
+				font-style: normal;
+				font-display: block;
+				src: url('./assets/font/Montserrat-Regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 500;
+				font-style: normal;
+				font-display: block;
+				src: url('./assets/font/Montserrat-Medium.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 600;
+				font-style: normal;
+				font-display: block;
+				src: url('./assets/font/Montserrat-Semibold.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 700;
+				font-style: normal;
+				font-display: block;
+				src: url('./assets/font/Montserrat-Bold.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 900;
+				font-style: normal;
+				font-display: block;
+				src: url('./assets/font/Montserrat-Black.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Monument Extended';
+				font-style: normal;
+				font-display: block;
 				src: url('./assets/font/PPMonumentExtended-Regular.otf');
+			}
+			@font-face {
+				font-family: 'Playfair Display';
+				font-weight: 700;
+				font-style: normal;
+				src: url('./assets/font/PlayfairDisplay-Bold.woff2') format('woff2');
 			}
 		</style>
 		<link rel="stylesheet" href="./css/style.css" />
@@ -93,44 +132,49 @@
 			<div class="container">
 				<p class="uppercase subtitle">O que fazemos</p>
 				<h1 class="title">Serviços</h1>
-				<nav>
-					<select class="services--menu">
-						<option value="site">Criação de Websites</option>
-						<option value="social-media">Social Media Design</option>
-						<option value="identidade">Identidade Visual</option>
-						<option value="cartao">Cartão de Visita Digital</option>
-						<option value="cardapio">Cardápio Digital</option>
-						<option value="ux">UI/UX Design</option>
-					</select>
-					<ul>
-						<li class="services_btn" data-btn="site">
-							<img src="./assets/servicos/website-m.svg" alt="" />
-							Criação de Websites
-						</li>
-						<li class="services_btn" data-btn="social-media">
-							<img src="./assets/servicos/social-media-m.svg" alt="" />
-							Social Media Design
-						</li>
-						<li class="services_btn" data-btn="identidade">
-							<img src="./assets/servicos/identidade-m.svg" alt="" />
-							Identidade Visual
-						</li>
-						<li class="services_btn" data-btn="cartao">
-							<img src="./assets/servicos/cartao-m.svg" alt="" />
-							Cartão de Visita Digital
-						</li>
-						<li class="services_btn" data-btn="ux">
-							<img src="./assets/servicos/cardapio-m.svg" alt="" />
-							UI/UX Design
-						</li>
-						<li class="services_btn" data-btn="cardapio">
-							<img src="./assets/servicos/cardapio-m.svg" alt="" />
-							Cardápio Digital
-						</li>
-					</ul>
-				</nav>
 
-				<div class="services--content"></div>
+				<div class="services--grid">
+					<nav>
+						<select class="services--menu">
+							<option value="site">Criação de Websites</option>
+							<option value="social-media">Social Media Design</option>
+							<option value="identidade">Identidade Visual</option>
+							<option value="cartao">Cartão de Visita Digital</option>
+							<option value="cardapio">Cardápio Digital</option>
+							<option value="ux">UI/UX Design</option>
+						</select>
+						<ul>
+							<li class="services_btn" data-btn="site">
+								<img src="./assets/servicos/website-m.svg" alt="" />
+								Criação de Websites
+							</li>
+							<li class="services_btn" data-btn="social-media">
+								<img src="./assets/servicos/social-media-m.svg" alt="" />
+								Social Media Design
+							</li>
+							<li class="services_btn" data-btn="identidade">
+								<img src="./assets/servicos/identidade-m.svg" alt="" />
+								Identidade Visual
+							</li>
+							<li class="services_btn" data-btn="cartao">
+								<img src="./assets/servicos/cartao-m.svg" alt="" />
+								Cartão de Visita Digital
+							</li>
+							<li class="services_btn" data-btn="ux">
+								<img src="./assets/servicos/ux-m.svg" alt="" />
+								UI/UX Design
+							</li>
+							<li class="services_btn" data-btn="cardapio">
+								<img src="./assets/servicos/cardapio-m.svg" alt="" />
+								Cardápio Digital
+							</li>
+						</ul>
+					</nav>
+
+					<div class="services--content"></div>
+
+					<figure></figure>
+				</div>
 			</div>
 		</section>
 

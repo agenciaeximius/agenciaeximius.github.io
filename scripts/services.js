@@ -1,4 +1,6 @@
 let contentDiv = document.querySelector('.services--content');
+let gridDiv = document.querySelector('.services--grid');
+let figure = gridDiv.querySelector('figure');
 let btns = document.querySelectorAll('.services_btn');
 let select = document.querySelector('.services--menu');
 
@@ -119,5 +121,6 @@ function changeContent(tag) {
 	}
 
 	contentDiv.innerHTML = content;
-	contentDiv.append(img);
+	figure.innerHTML = '';
+	figure.append(img);
 }
