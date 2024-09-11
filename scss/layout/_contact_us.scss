@@ -86,12 +86,17 @@
 			margin-bottom: 11px;
 			font-size: rem(22px);
 		}
+		input {
+			width: 100%;
+			height: 57px;
+		}
 		textarea {
+			width: 100%;
 			resize: vertical;
 			min-height: 150px;
 		}
 		button {
-			width: 80%;
+			width: 50%;
 			margin-inline: auto;
 			display: block;
 			font-size: rem(22px);
