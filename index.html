@@ -2,6 +2,9 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Serviços digitais de criação de websites, social medias e outros." />
+		<meta name="keywords" content="Websites, Social Media, Identidade visual, Cartão de visita, UI/UX, Cardápio" />
+		<meta name="author" content="Igor Marinho, Vinícius Davi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Eximius Design</title>
 		<style>
@@ -24,7 +27,7 @@
 				font-weight: 600;
 				font-style: normal;
 				font-display: block;
-				src: url('./assets/font/Montserrat-Semibold.woff2') format('woff2');
+				src: url('./assets/font/Montserrat-SemiBold.woff2') format('woff2');
 			}
 			@font-face {
 				font-family: 'Montserrat';
@@ -44,17 +47,17 @@
 				font-family: 'Monument Extended';
 				font-style: normal;
 				font-display: block;
-				src: url('./assets/font/PPMonumentExtended-Regular.otf');
+				src: url('./assets/font/PPMonumentExtended-Regular.woff2') format('woff2');
 			}
 			@font-face {
 				font-family: 'Playfair Display';
 				font-weight: 700;
-				font-style: normal;
-				src: url('./assets/font/PlayfairDisplay-Bold.woff2') format('woff2');
+				font-style: italic;
+				src: url('./assets/font/PlayfairDisplay-BoldItalic.woff2') format('woff2');
 			}
 		</style>
 		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
 		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</head>
 	<body>
@@ -67,7 +70,7 @@
 						<li><a href="#services" class="header--link header--services">Serviços</a></li>
 					</ul>
 
-					<img src="./assets/logo.png" class="header--logo" alt="" />
+					<img src="./assets/logo.webp" class="header--logo" alt="" />
 
 					<ul class="header--list">
 						<li><a href="#projects" class="header--link header--projetcs">Projetos</a></li>
@@ -84,7 +87,7 @@
 						</h1>
 						<a href="#contact" class="hero--btn uppercase button">Comece um projeto personalizado</a>
 					</div>
-					<img src="./assets/saly.png" class="hero--img" alt="" />
+					<img src="./assets/saly.webp" class="hero--img" alt="" />
 				</div>
 			</section>
 			<a class="down" href="#about"><span></span></a>
@@ -106,7 +109,7 @@
 						</nav>
 					</aside>
 					<nav class="about--menu">
-						<select class="about--select">
+						<select class="about--select" id="about--select" name="about--select">
 							<option value="time">Time</option>
 							<option value="valores">Valores</option>
 							<option value="segmentos">Segmentos</option>
@@ -135,7 +138,7 @@
 
 				<div class="services--grid">
 					<nav>
-						<select class="services--menu">
+						<select class="services--menu" id="services--menu" name="services--menu">
 							<option value="site">Criação de Websites</option>
 							<option value="social-media">Social Media Design</option>
 							<option value="identidade">Identidade Visual</option>
@@ -195,23 +198,23 @@
 				</div>
 
 				<div class="project">
-					<img class="project--img" src="./assets/projetos/websites.png" alt="" />
+					<img class="project--img" src="./assets/projetos/websites.webp" alt="" />
 					<div class="project--text-wrapper">
-						<h3 class="uppercase project--title">Websites</h3>
+						<h2 class="uppercase project--title">Websites</h2>
 						<p class="project--text">Conte conosco para o desenvolvimento de seu website para impulsionar seu negócio com tecnologia e profissionalismo.</p>
 					</div>
 				</div>
 				<div class="project">
-					<img class="project--img" src="./assets/projetos/social-media.png" alt="" />
+					<img class="project--img" src="./assets/projetos/social-media.webp" alt="" />
 					<div class="project--text-wrapper">
-						<h3 class="uppercase project--title">Social Media</h3>
+						<h2 class="uppercase project--title">Social Media</h2>
 						<p class="project--text">Somos especialistas na produção de artes para se destacar nas redes sociais com qualidade, garantindo sua presença digital.</p>
 					</div>
 				</div>
 				<div class="project">
-					<img class="project--img" src="./assets/projetos/identidade-visual.png" alt="" />
+					<img class="project--img" src="./assets/projetos/identidade-visual.webp" alt="" />
 					<div class="project--text-wrapper">
-						<h3 class="uppercase project--title">Identidade visual</h3>
+						<h2 class="uppercase project--title">Identidade visual</h2>
 						<p class="project--text">Criamos identidades visuais únicas e inovadoras que representam os valores de seu negócio para seu público.</p>
 					</div>
 				</div>
@@ -261,13 +264,13 @@
 
 				<form class="contact_us--form">
 					<label for="name">Nome completo:</label>
-					<input class="contact_us--input" type="text" name="name" id="name" />
-					<label for="email">E-mail:</label>
-					<input class="contact_us--input" type="email" name="email" id="email" />
+					<input class="contact_us--input" type="text" id="name" name="name" autocomplete="name" required />
+					<label for="e-mail">E-mail:</label>
+					<input class="contact_us--input" type="email" id="e-mail" name="e-mail" autocomplete="email" required />
 					<label for="tel">Telefone/WhatsApp com DDD:</label>
-					<input class="contact_us--input" type="tel" name="tel" id="tel" />
+					<input class="contact_us--input" type="tel" id="tel" name="tel" autocomplete="tel-national" required />
 					<label for="msg">Mensagem:</label>
-					<textarea class="contact_us--input" name="msg" id="msg"></textarea>
+					<textarea class="contact_us--input" id="msg" name="msg" required></textarea>
 					<button type="submit" class="uppercase button">Enviar</button>
 				</form>
 			</div>
@@ -275,7 +278,7 @@
 
 		<footer class="footer">
 			<div class="container">
-				<img src="./assets/logo.png" class="footer--logo" alt="" />
+				<img src="./assets/logo.webp" class="footer--logo" alt="" />
 				<div>
 					<h1 class="footer--title uppercase">Links</h1>
 					<nav>

@@ -40,6 +40,7 @@ btns[0].click();
 function changeContent(tag) {
 	let content;
 	let img = new Image();
+	img.alt = '';
 
 	switch (tag) {
 		case 'site':

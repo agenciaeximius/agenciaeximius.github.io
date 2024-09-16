@@ -46,13 +46,13 @@ function changeContent(tag) {
 			<div class="time">
 				<div class="fig">
 					<div class="img-container">
-						<img src="./assets/time/vinicius.jpg" alt="Foto de Vinícius Davi" />					
+						<img src="./assets/time/vinicius.webp" alt="Foto de Vinícius Davi" />					
 					</div>
 					<p>Vinícius Davi</p>
 				</div>
 				<div class="fig">
 					<div class="img-container">
-						<img src="./assets/time/igor.jpg" alt="Foto de Igor Marinho" />
+						<img src="./assets/time/igor.webp" alt="Foto de Igor Marinho" />
 					</div>
 					<p>Igor Marinho</p>
 				</div>
