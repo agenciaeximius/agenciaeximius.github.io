@@ -4,11 +4,11 @@
 .services {
 	height: 100%;
 	padding-bottom: 150px;
+	padding-top: 40px;
 	@include mq(lg) {
 		height: 770px;
 		padding-bottom: 0;
 	}
-	padding-top: 40px;
 	.title {
 		margin-bottom: 40px;
 	}
@@ -16,10 +16,10 @@
 		grid-area: nav;
 		border-bottom: 3px solid $white;
 		width: 100%;
+		margin-bottom: 50px;
 		@include mq(lg) {
 			width: fit-content;
 		}
-		margin-bottom: 50px;
 	}
 	select {
 		display: block;
@@ -30,17 +30,21 @@
 	}
 	ul {
 		display: none;
-		@include mq(lg) {
-			display: grid;
-		}
 		grid-template-columns: 1fr 1fr;
 		row-gap: 55px;
 		margin-bottom: 50px;
+		@include mq(lg) {
+			display: grid;
+		}
 	}
 	li {
 		cursor: pointer;
 		color: $white-unfocused;
 		font-weight: 600;
+		display: flex;
+		flex: 0 0 33.3333%;
+		align-items: center;
+		gap: 10px;
 		@media only screen and (max-width: 990px) {
 			flex: 1;
 		}
@@ -50,10 +54,6 @@
 				filter: brightness(1);
 			}
 		}
-		display: flex;
-		flex: 0 0 33.3333%;
-		align-items: center;
-		gap: 10px;
 		img {
 			filter: brightness(0.5);
 			width: 30px;

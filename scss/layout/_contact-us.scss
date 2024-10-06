@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
-.contact_us {
+.contact-us {
 	padding-top: 55px;
 	color: $black;
 	.title {
@@ -71,10 +71,10 @@
 		li {
 			display: flex;
 			gap: 6px;
+			align-items: center;
 			@include mq(sm) {
 				gap: 15px;
 			}
-			align-items: center;
 		}
 	}
 	form {

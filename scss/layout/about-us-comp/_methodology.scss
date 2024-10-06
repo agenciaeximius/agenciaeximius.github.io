@@ -1,14 +1,14 @@
 @use '../../utilities/' as *;
 @use '../../abstracts/' as *;
 
-.metodologia {
+.methodology {
 	h3 {
 		font-size: rem(28px);
+		font-weight: 600;
+		margin-bottom: 16px;
 		@include mq(sm) {
 			font-size: rem(32px);
 		}
-		font-weight: 600;
-		margin-bottom: 16px;
 	}
 	div > p {
 		font-size: rem(16px);
@@ -26,11 +26,11 @@
 	li {
 		display: grid;
 		grid-template-columns: 60px 1fr;
+		align-items: center;
+		gap: 11px;
 		@include mq(sm) {
 			grid-template-columns: 75px 1fr;
 		}
-		align-items: center;
-		gap: 11px;
 		@include mq(sm) {
 			gap: 22px;
 		}
@@ -38,11 +38,11 @@
 			-webkit-text-stroke-width: 1.5px;
 			-webkit-text-stroke-color: $light-gray;
 			font-size: rem(60px);
+			font-weight: 900;
+			color: $black;
 			@include mq(sm) {
 				font-size: rem(72px);
 			}
-			font-weight: 900;
-			color: $black;
 		}
 	}
 }

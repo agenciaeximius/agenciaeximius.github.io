@@ -2,7 +2,8 @@
 
 .header {
 	--speed: -2;
-	z-index: 10;
+	position: relative;
+	z-index: 15;
 }
 
 .hero {

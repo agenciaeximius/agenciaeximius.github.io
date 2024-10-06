@@ -1,4 +1,4 @@
-@forward './about_us_comp/';
+@forward './about-us-comp/';
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
@@ -14,17 +14,17 @@
 	&--aside {
 		display: none;
 		font-weight: 600;
-		@include mq(md) {
-			display: block;
-		}
 		border-left: 7px solid $white;
 		padding: 25px 0px 25px 15px;
-		@include mq(sm) {
-			padding: 25px 0px 25px 30px;
-		}
 		width: 100%;
 		height: fit-content;
 		margin-inline: auto;
+		@include mq(md) {
+			display: block;
+		}
+		@include mq(sm) {
+			padding: 25px 0px 25px 30px;
+		}
 		@include mq(md) {
 			padding: 36px 25px;
 			margin: 0;

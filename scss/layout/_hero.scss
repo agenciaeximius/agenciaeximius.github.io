@@ -43,6 +43,8 @@
 	}
 	&--img {
 		display: none;
+		justify-self: end;
+		grid-column: 2;
 		@include mq(md) {
 			display: block;
 			max-height: 100%;
@@ -52,8 +54,6 @@
 		@include mq(xxl) {
 			max-width: 640px;
 		}
-		justify-self: end;
-		grid-column: 2;
 	}
 	&--highlight {
 		border-radius: 50%;

@@ -32,7 +32,7 @@
 			gap: 0;
 			padding: 30px 0 40px 0;
 		}
-		nav ul {
+		ul {
 			margin-top: 13px;
 			display: flex;
 			flex-direction: column;
@@ -45,8 +45,8 @@
 				@include mq(sm) {
 					font-size: rem(16px);
 				}
-				img {
-					max-width: 33px;
+				svg {
+					width: 33px;
 				}
 			}
 		}

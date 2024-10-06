@@ -6,27 +6,52 @@
 	border-bottom: 3px solid $white;
 	font-weight: 600;
 	&--nav {
-		display: flex;
+		display: grid;
+		place-items: center;
+		gap: 20px;
+		align-items: center;
 		height: 128px;
-		justify-content: space-between;
+		@include mq(md) {
+			grid-template-columns: 1fr auto 1fr;
+			place-items: initial;
+		}
 	}
 	&--list {
-		display: none;
+		visibility: hidden;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: 20px;
+		font-size: rem(14px);
+		&:nth-of-type(2) {
+			justify-content: end;
+		}
 		@include mq(md) {
-			display: flex;
-			gap: 20px;
+			visibility: visible;
 		}
 		@include mq(lg) {
+			font-size: rem(16px);
+		}
+		@include mq(xxl) {
 			gap: 50px;
 		}
-		align-items: center;
 	}
 	&--logo {
 		margin-inline: auto;
-		padding-block: 25px;
+		max-height: 78px;
+		position: absolute;
+		align-self: center;
+		@include mq(md) {
+			position: initial;
+			max-height: 70px;
+		}
+		@include mq(lg) {
+			max-height: 78px;
+		}
 	}
 	&--contact {
-		display: flex;
+		display: flex !important;
 		align-items: center;
+		padding: 8px 12px !important;
 	}
 }
