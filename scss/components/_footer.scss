@@ -47,8 +47,17 @@
 				}
 				svg {
 					width: 33px;
+					fill: $white;
 				}
 			}
 		}
+	}
+}
+
+.reverse .footer {
+	background-color: $white;
+	color: $black !important;
+	svg {
+		fill: $black !important;
 	}
 }

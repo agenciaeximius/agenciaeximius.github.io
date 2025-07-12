@@ -41,23 +41,11 @@ function changeAboutContent(tag) {
 		// pt
 
 		case 'team-pt':
-			h2 = 'Quem faz acontecer';
+			h2 = 'Conheça nossa essência';
 			p = 'Especialistas em soluções digitais, somos focados em agregar valor e transformar negócios por meio da tecnologia de ponta.';
 			content = `
-				<div class='team'>
-					<div class='fig'>
-						<div class='img-container'>
-							<img src='../assets/team/vinicius.webp' alt='Foto de Vinícius Davi' />
-						</div>
-						<p>Vinícius Davi</p>
-					</div>
-					<div class='fig'>
-						<div class='img-container'>
-							<img src='../assets/team/igor.webp' alt='Foto de Igor Marinho' />
-						</div>
-						<p>Igor Marinho</p>
-					</div>
-				</div>
+				<p>Combinamos estratégia, design e tecnologia para criar experiências que geram valor real e melhoram a presença digital de marcas e empresas.</p>
+				<p>Para nós, cada projeto é uma oportunidade de entregar excelência e impulsionar resultados com propósito e criatividade.</p>
 			`;
 			break;
 		case 'values-pt':
@@ -198,23 +186,11 @@ function changeAboutContent(tag) {
 		// en
 
 		case 'team-en':
-			h2 = 'Who makes it happen';
-			p = 'Specialists in digital solutions, we are focused on adding value and transforming businesses through cutting-edge technology.';
+			h2 = 'Discover our essence';
+			p = 'Experts in digital solutions, we are focused on adding value and transforming businesses through cutting-edge technology.';
 			content = `
-				<div class='team'>
-					<div class='fig'>
-						<div class='img-container'>
-							<img src='../assets/team/vinicius.webp' alt='Photo of Vinícius Davi' />
-						</div>
-						<p>Vinícius Davi</p>
-					</div>
-					<div class='fig'>
-						<div class='img-container'>
-							<img src='../assets/team/igor.webp' alt='Photo of Igor Marinho' />
-						</div>
-						<p>Igor Marinho</p>
-					</div>
-				</div>
+				<p>We combine strategy, design, and technology to create experiences that generate real value and enhance the digital presence of brands and companies.</p>
+				<p>For us, each project is an opportunity to deliver excellence and drive results with purpose and creativity.</p>
 			`;
 			break;
 		case 'values-en':
