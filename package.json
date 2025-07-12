@@ -1,6 +1,6 @@
 {
 	"name": "eximius",
-	"version": "1.0.0",
+	"version": "1.0.5",
 	"description": "",
 	"main": "public/index.html",
 	"author": "igormsiqueira0, viniciuschwalensky",
@@ -17,8 +17,13 @@
 		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-rename": "^2.0.0",
-		"gulp-sass": "^5.1.0",
+		"gulp-sass": "^6.0.1",
 		"gulp-uglify": "^3.0.2",
-		"sass": "^1.79.4"
+		"sass": "^1.89.2"
+	},
+	"overrides": {
+		"browser-sync": {
+			"eazy-logger": "3.1.0"
+		}
 	}
 }

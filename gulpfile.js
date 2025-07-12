@@ -6,8 +6,9 @@ import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 
-import * as dartSass from 'sass';
+import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
+
 const sass = gulpSass(dartSass);
 
 function compileSass() {
@@ -30,7 +31,7 @@ function gulpJS() {
 		.pipe(concat('script.min.js'))
 		.pipe(
 			babel({
-				presets: ['@babel/env'],
+				presets: ['@babel/preset-env'],
 			}),
 		)
 		.pipe(uglify())
@@ -38,18 +39,19 @@ function gulpJS() {
 		.pipe(browserSync.stream());
 }
 
-function sync() {
+function sync(done) {
 	browserSync.init({
 		server: {
 			baseDir: './public',
 		},
 	});
+	done();
 }
 
 function watch() {
-	gulp.watch('./src/scss/**/**/*.scss', compileSass);
-	gulp.watch('./src/scripts/*.js', gulpJS);
+	gulp.watch('./src/scss/**/*.scss', compileSass);
+	gulp.watch('./src/scripts/*.+(js|jsx)', gulpJS);
 	gulp.watch('./public/**/*.html').on('change', browserSync.reload);
 }
 
-export default gulp.parallel(compileSass, gulpJS, watch, sync);
+export default gulp.parallel(sync, compileSass, gulpJS, watch);
