@@ -1,57 +1,58 @@
-let aboutContent = document.querySelector('.about--content');
-let aboutBtns = document.querySelectorAll('.about--btn');
-let aboutSelect = document.querySelector('.about--select');
+try {
+	let aboutContent = document.querySelector('.about--content');
+	let aboutBtns = document.querySelectorAll('.about--btn');
+	let aboutSelect = document.querySelector('.about--select');
 
-function removeAboutActive() {
-	aboutBtns.forEach((btn) => {
-		btn.classList.remove('active');
-	});
-}
-
-aboutBtns.forEach((btn) => {
-	btn.addEventListener('click', () => {
-		removeAboutActive();
-
-		let type = btn.dataset.btn;
-		changeAboutContent(type);
-
-		aboutSelect.value = type;
-		btn.classList.add('active');
-	});
-});
-
-aboutSelect.addEventListener('change', () => {
-	changeAboutContent(aboutSelect.value);
+	function removeAboutActive() {
+		aboutBtns.forEach((btn) => {
+			btn.classList.remove('active');
+		});
+	}
 
 	aboutBtns.forEach((btn) => {
-		let type = btn.dataset.btn;
-		if (type == aboutSelect.value) {
+		btn.addEventListener('click', () => {
 			removeAboutActive();
+
+			let type = btn.dataset.btn;
+			changeAboutContent(type);
+
+			aboutSelect.value = type;
 			btn.classList.add('active');
-		}
+		});
 	});
-});
 
-aboutBtns[0].click();
+	aboutSelect.addEventListener('change', () => {
+		changeAboutContent(aboutSelect.value);
 
-function changeAboutContent(tag) {
-	let h2, p, content;
+		aboutBtns.forEach((btn) => {
+			let type = btn.dataset.btn;
+			if (type == aboutSelect.value) {
+				removeAboutActive();
+				btn.classList.add('active');
+			}
+		});
+	});
 
-	switch (tag) {
-		// pt
+	aboutBtns[0].click();
 
-		case 'team-pt':
-			h2 = 'Conheça nossa essência';
-			p = 'Especialistas em soluções digitais, somos focados em agregar valor e transformar negócios por meio da tecnologia de ponta.';
-			content = `
+	function changeAboutContent(tag) {
+		let h2, p, content;
+
+		switch (tag) {
+			// pt
+
+			case 'team-pt':
+				h2 = 'Conheça nossa essência';
+				p = 'Especialistas em soluções digitais, somos focados em agregar valor e transformar negócios por meio da tecnologia de ponta.';
+				content = `
 				<p>Combinamos estratégia, design e tecnologia para criar experiências que geram valor real e melhoram a presença digital de marcas e empresas.</p>
 				<p>Para nós, cada projeto é uma oportunidade de entregar excelência e impulsionar resultados com propósito e criatividade.</p>
 			`;
-			break;
-		case 'values-pt':
-			h2 = 'O que valorizamos';
-			p = 'Nossos valores são os pilares que fundamentam nosso modelo de trabalho e refletem aquilo que acreditamos.';
-			content = `
+				break;
+			case 'values-pt':
+				h2 = 'O que valorizamos';
+				p = 'Nossos valores são os pilares que fundamentam nosso modelo de trabalho e refletem aquilo que acreditamos.';
+				content = `
 				<div class='values'>
 					<ul>
 						<li>
@@ -85,11 +86,11 @@ function changeAboutContent(tag) {
 					</ul>
 				</div>
 			`;
-			break;
-		case 'segments-pt':
-			h2 = 'Setores que atendemos';
-			p = 'Seja qual for o ramo de seu negócio, podemos te ajudar a se posicionar com destaque no ambiente digital.';
-			content = `
+				break;
+			case 'segments-pt':
+				h2 = 'Setores que atendemos';
+				p = 'Seja qual for o ramo de seu negócio, podemos te ajudar a se posicionar com destaque no ambiente digital.';
+				content = `
 				<div class='segments'>
 					<ul>
 						<li>
@@ -143,11 +144,11 @@ function changeAboutContent(tag) {
 					</ul>
 				</div>
 			`;
-			break;
-		case 'methodology-pt':
-			h2 = 'Nosso fluxo de trabalho';
-			p = 'Contamos com as melhores metodologias em nosso processo de trabalho, juntando organização, eficiência e propósito.';
-			content = `
+				break;
+			case 'methodology-pt':
+				h2 = 'Nosso fluxo de trabalho';
+				p = 'Contamos com as melhores metodologias em nosso processo de trabalho, juntando organização, eficiência e propósito.';
+				content = `
 				<div class='methodology'>
 					<ul>
 						<li>
@@ -181,22 +182,22 @@ function changeAboutContent(tag) {
 					</ul>
 				</div>
 			`;
-			break;
+				break;
 
-		// en
+			// en
 
-		case 'team-en':
-			h2 = 'Discover our essence';
-			p = 'Experts in digital solutions, we are focused on adding value and transforming businesses through cutting-edge technology.';
-			content = `
+			case 'team-en':
+				h2 = 'Discover our essence';
+				p = 'Experts in digital solutions, we are focused on adding value and transforming businesses through cutting-edge technology.';
+				content = `
 				<p>We combine strategy, design, and technology to create experiences that generate real value and enhance the digital presence of brands and companies.</p>
 				<p>For us, each project is an opportunity to deliver excellence and drive results with purpose and creativity.</p>
 			`;
-			break;
-		case 'values-en':
-			h2 = 'What we value';
-			p = 'Our values are the pillars that support our work model and reflect what we believe in.';
-			content = `
+				break;
+			case 'values-en':
+				h2 = 'What we value';
+				p = 'Our values are the pillars that support our work model and reflect what we believe in.';
+				content = `
 				<div class='values'>
 					<ul>
 						<li>
@@ -230,11 +231,11 @@ function changeAboutContent(tag) {
 					</ul>
 				</div>
 			`;
-			break;
-		case 'segments-en':
-			h2 = 'Areas we serve';
-			p = 'No matter the sector of your business, we can help you shine in the digital environment.';
-			content = `
+				break;
+			case 'segments-en':
+				h2 = 'Areas we serve';
+				p = 'No matter the sector of your business, we can help you shine in the digital environment.';
+				content = `
 				<div class='segments'>
 					<ul>
 						<li>
@@ -288,11 +289,11 @@ function changeAboutContent(tag) {
 					</ul>
 				</div>
 			`;
-			break;
-		case 'methodology-en':
-			h2 = 'Our workflow';
-			p = 'We use the best methodologies in our work process, combining organization, efficiency, and purpose.';
-			content = `
+				break;
+			case 'methodology-en':
+				h2 = 'Our workflow';
+				p = 'We use the best methodologies in our work process, combining organization, efficiency, and purpose.';
+				content = `
 				<div class='methodology'>
 					<ul>
 						<li>
@@ -306,7 +307,7 @@ function changeAboutContent(tag) {
 							<p>2.</p>
 							<div>
 								<h3>Design</h3>
-								<p>Generating design solutions aligned with your business's visual identity in a precise and modern way.</p>
+								<p>Generating design solutions aligned with your business's brand identity in a precise and modern way.</p>
 							</div>
 						</li>
 						<li>
@@ -326,10 +327,13 @@ function changeAboutContent(tag) {
 					</ul>
 				</div>
 			`;
-			break;
-		default:
-			throw new Error('Erro');
-	}
+				break;
+			default:
+				throw new Error('Erro');
+		}
 
-	aboutContent.innerHTML = `<h2>${h2}</h2><p>${p}</p>${content}`;
+		aboutContent.innerHTML = `<h2>${h2}</h2><p>${p}</p>${content}`;
+	}
+} catch (e) {
+	console.error(e);
 }
