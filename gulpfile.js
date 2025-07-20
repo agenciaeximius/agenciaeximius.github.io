@@ -2,11 +2,13 @@ import gulp from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
 import concat from 'gulp-concat';
 import babel from 'gulp-babel';
-import uglify from 'gulp-uglify';
+import uglify from 'gulp-terser';
 import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
+import plumber from 'gulp-plumber';
+import notify from 'gulp-notify';
 
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 
 const sass = gulpSass(dartSass);
@@ -14,6 +16,11 @@ const sass = gulpSass(dartSass);
 function compileSass() {
 	return gulp
 		.src('./src/scss/style.scss')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError('Error: <%= error.message %>'),
+			}),
+		)
 		.pipe(sass({ outputStyle: 'compressed' }))
 		.pipe(
 			autoprefixer({
@@ -28,6 +35,11 @@ function compileSass() {
 function gulpJS() {
 	return gulp
 		.src('./src/scripts/*.+(js|jsx)')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError('Error: <%= error.message %>'),
+			}),
+		)
 		.pipe(concat('script.min.js'))
 		.pipe(
 			babel({
