@@ -1,5 +1,3 @@
-const securityToken = '0bb1fc2d-bf91-41c0-9d86-a75d73020b65';
-
 let form = document.querySelector('form');
 
 function sendEmail({ target, ...rest }) {
