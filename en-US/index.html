@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Digital services for website creation, social media, and more." />
-		<meta name="keywords" content="eximius, design, site, websites, social media, visual identity, business card, ui/ux, menu" />
+		<meta name="keywords" content="eximius, design, site, websites, social media, brand identity, business card, ui/ux, menu" />
 		<meta name="author" content="Igor Marinho, Vinícius Davi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Eximius Design</title>
@@ -65,7 +65,6 @@
 
 		<link rel="stylesheet" href="../css/style.min.css" />
 		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</head>
 	<body>
 		<div class="parallax">
@@ -161,7 +160,7 @@
 						<select class="services--menu" id="services--menu" name="services--menu" aria-controls="services--content">
 							<option value="site-en">Website Creation</option>
 							<option value="social-media-en">Social Media Design</option>
-							<option value="identity-en">Visual Identity</option>
+							<option value="identity-en">brand identity</option>
 							<option value="card-en">Digital Business Card</option>
 							<option value="dig-menu-en">Digital Menu</option>
 							<option value="ux-en">UI/UX Design</option>
@@ -177,7 +176,7 @@
 							</li>
 							<li class="services--btn" data-btn="identity-en">
 								<img src="../assets/services/identity-m.svg" alt="" />
-								Visual Identity
+								brand identity
 							</li>
 							<li class="services--btn" data-btn="card-en">
 								<img src="../assets/services/card-m.svg" alt="" />
@@ -217,7 +216,7 @@
 					<h1 class="title">Projects</h1>
 				</div>
 
-				<p>Click <a href="./projects.html">here</a> to learn more about the projects we've created</p>
+				<p>Click <a href="./projects">here</a> to learn more about the projects we've created</p>
 
 				<div class="project">
 					<img
@@ -238,9 +237,9 @@
 					</div>
 				</div>
 				<div class="project">
-					<img class="project--img" src="../assets/projects/visual-identity.webp" alt="Various visual identities" />
+					<img class="project--img" src="../assets/projects/brand-identity.webp" alt="Various visual identities" />
 					<div class="project--text-wrapper">
-						<h2 class="uppercase project--title">Visual Identity</h2>
+						<h2 class="uppercase project--title">brand identity</h2>
 						<p class="project--text">We create unique and innovative visual identities that represent your business values to your audience.</p>
 					</div>
 				</div>
@@ -348,31 +347,7 @@
 			</div>
 		</footer>
 
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script type="text/javascript" src="../js/script.min.js"></script>
-		<script type="text/javascript">
-			let form = document.querySelector('form');
-
-			function sendEmail({ target, ...rest }) {
-				let [name, email, tel, msg] = target;
-				Email.send({
-					SecureToken: 'c218993b-9bc1-46d8-960b-6df07558bcdc',
-					To: 'agencia@eximiusdesign.com.br',
-					From: 'agencia@eximiusdesign.com.br',
-					Subject: `Contact from ${name.value}`,
-					Body: `
-          User's Name: ${name.value}<br />
-          User's Email: ${email.value}<br />
-          User's Phone/WhatsApp: ${tel.value}<br />
-          Message:<br />
-          ${msg.value}
-          `,
-				}).then(() => alert('Email sent! We will contact you soon.'));
-			}
-
-			form.addEventListener('submit', (e) => {
-				e.preventDefault();
-				sendEmail(e);
-			});
-		</script>
 	</body>
 </html>

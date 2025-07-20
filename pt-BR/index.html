@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Serviços digitais de criação de websites, social medias e outros." />
-		<meta name="keywords" content="eximius, design, site, websites, social media, identity visual, cartão de visita, ui/ux, cardapio" />
+		<meta name="keywords" content="eximius, design, site, websites, social media, identidade visual, cartão de visita, ui/ux, cardapio" />
 		<meta name="author" content="Igor Marinho, Vinícius Davi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Eximius Design</title>
@@ -64,7 +64,6 @@
 
 		<link rel="stylesheet" href="../css/style.min.css" />
 		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</head>
 	<body>
 		<div class="parallax">
@@ -160,7 +159,7 @@
 						<select class="services--menu" id="services--menu" name="services--menu" aria-controls="services--content">
 							<option value="site-pt">Criação de Websites</option>
 							<option value="social-media-pt">Social Media Design</option>
-							<option value="identity-pt">identity Visual</option>
+							<option value="identity-pt">Identidade Visual</option>
 							<option value="card-pt">Cartão de Visita Digital</option>
 							<option value="dig-menu-pt">Cardápio Digital</option>
 							<option value="ux-pt">UI/UX Design</option>
@@ -216,7 +215,7 @@
 					<h1 class="title">Projetos</h1>
 				</div>
 
-				<p>Clique <a href="./projetos.html">aqui</a> e veja mais sobre os projetos criados</p>
+				<p>Clique <a href="./projetos">aqui</a> e veja mais sobre os projetos criados</p>
 
 				<div class="project">
 					<img class="project--img" src="../assets/projects/websites.webp" alt="Print de 4 diferentes websites" />
@@ -233,7 +232,7 @@
 					</div>
 				</div>
 				<div class="project">
-					<img class="project--img" src="../assets/projects/visual-identity.webp" alt="Diversas identidades visuais" />
+					<img class="project--img" src="../assets/projects/brand-identity.webp" alt="Diversas identidades visuais" />
 					<div class="project--text-wrapper">
 						<h2 class="uppercase project--title">Identidade visual</h2>
 						<p class="project--text">Criamos identidades visuais únicas e inovadoras que representam os valores de seu negócio para seu público.</p>
@@ -248,7 +247,7 @@
 				<h1 class="title">Fale conosco</h1>
 
 				<div class="contact-us--info">
-					<p>Ficaremos gratos em trabalhar de modo colaborativo para a entrega de excelentes projects.</p>
+					<p>Ficaremos gratos em trabalhar de modo colaborativo para a entrega de excelentes projetos.</p>
 					<hr />
 					<ul class="contact-us--contacts">
 						<li>
@@ -343,31 +342,7 @@
 			</div>
 		</footer>
 
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script type="text/javascript" src="../js/script.min.js"></script>
-		<script type="text/javascript">
-			let form = document.querySelector('form');
-
-			function sendEmail({ target, ...rest }) {
-				let [name, email, tel, msg] = target;
-				Email.send({
-					SecureToken: 'c218993b-9bc1-46d8-960b-6df07558bcdc',
-					To: 'agencia@eximiusdesign.com.br',
-					From: 'agencia@eximiusdesign.com.br',
-					Subject: `Contato de ${name.value}`,
-					Body: `
-					Nome do usuário: ${name.value}<br />
-					E-mail do usuário: ${email.value}<br />
-					Telefone/WhatsApp do usuário: ${tel.value}<br />
-					Mensagem:<br />
-					${msg.value}
-					`,
-				}).then(() => alert('E-mail enviado! Logo entraremos em contato.'));
-			}
-
-			form.addEventListener('submit', (e) => {
-				e.preventDefault();
-				sendEmail(e);
-			});
-		</script>
 	</body>
 </html>
