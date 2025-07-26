@@ -342,29 +342,32 @@ section {
   margin-inline: auto;
   max-width: 90%;
 }
+.container.gallery {
+  max-width: 100%;
+}
 @media only screen and (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 540px !important;
   }
 }
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 720px !important;
   }
 }
 @media only screen and (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 960px !important;
   }
 }
 @media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1140px !important;
   }
 }
 @media only screen and (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    max-width: 1320px !important;
   }
 }
 
@@ -1069,7 +1072,7 @@ select {
 }
 
 .projects-page {
-  padding-block: 100px;
+  padding-top: 100px;
 }
 .projects-page p {
   text-align: justify;
@@ -1117,14 +1120,18 @@ select {
   color: #ffffff;
 }
 .projects-page section {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 135px;
   gap: 40px;
-  grid-template-columns: 1fr;
   text-align: left;
+}
+.projects-page section:nth-child(2n) {
+  flex-direction: column-reverse;
 }
 @media only screen and (min-width: 1200px) {
   .projects-page section {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .projects-page section:nth-child(2n) p, .projects-page section:nth-child(2n) h3 {
@@ -1132,7 +1139,7 @@ select {
   }
 }
 .projects-page--vi {
-  margin-bottom: 0 !important;
+  margin-bottom: 100px !important;
   row-gap: 10px !important;
 }
 .projects-page--vi > div:nth-child(2n) {
@@ -1211,17 +1218,19 @@ select {
   cursor: pointer;
   font-size: 40px;
 }
-.projects-page .gallery {
+
+.gallery {
+  margin-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
 }
 @media only screen and (min-width: 992px) {
-  .projects-page .gallery {
+  .gallery {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
-.projects-page .gallery a {
+.gallery a {
   aspect-ratio: 154/205;
   width: 100%;
   padding-bottom: 100%;
@@ -1231,7 +1240,7 @@ select {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
-.projects-page .gallery a img {
+.gallery a img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1244,7 +1253,7 @@ select {
   display: block;
   transition: transform 0.3s ease;
 }
-.projects-page .gallery a:hover img {
+.gallery a:hover img {
   transform: scale(1.05);
 }
 
