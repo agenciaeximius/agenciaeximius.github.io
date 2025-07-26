@@ -3,20 +3,22 @@
 .container {
 	margin-inline: auto;
 	max-width: 90%;
-
+	&.gallery {
+		max-width: 100%;
+	}
 	@include mq(sm) {
-		max-width: 540px;
+		max-width: 540px !important;
 	}
 	@include mq(md) {
-		max-width: 720px;
+		max-width: 720px !important;
 	}
 	@include mq(lg) {
-		max-width: 960px;
+		max-width: 960px !important;
 	}
 	@include mq(xl) {
-		max-width: 1140px;
+		max-width: 1140px !important;
 	}
 	@include mq(xxl) {
-		max-width: 1320px;
+		max-width: 1320px !important;
 	}
 }

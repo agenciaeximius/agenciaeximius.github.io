@@ -2,7 +2,7 @@
 @use '../utilities/' as *;
 
 .projects-page {
-	padding-block: 100px;
+	padding-top: 100px;
 	p {
 		text-align: justify;
 		@include mq(xl) {
@@ -44,12 +44,16 @@
 		}
 	}
 	& section {
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 135px;
 		gap: 40px;
-		grid-template-columns: 1fr;
 		text-align: left;
+		&:nth-child(2n) {
+			flex-direction: column-reverse;
+		}
 		@include mq(xl) {
+			display: grid;
 			grid-template-columns: 1fr 1fr;
 			&:nth-child(2n) p,
 			&:nth-child(2n) h3 {
@@ -58,7 +62,7 @@
 		}
 	}
 	&--vi {
-		margin-bottom: 0 !important;
+		margin-bottom: 100px !important;
 		row-gap: 10px !important;
 		& > div:nth-child(2n) {
 			justify-self: center;
@@ -128,39 +132,38 @@
 			font-size: 40px;
 		}
 	}
+}
 
-	// GALLERY
-
-	& .gallery {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 4px;
-		@include mq(lg) {
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		}
-		& a {
-			aspect-ratio: 154/205;
+.gallery {
+	margin-bottom: 100px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4px;
+	@include mq(lg) {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	& a {
+		aspect-ratio: 154/205;
+		width: 100%;
+		padding-bottom: 100%;
+		position: relative;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			padding-bottom: 100%;
-			position: relative;
-			overflow: hidden;
-			background-color: #fff;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			border-radius: 2px;
-			& img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center;
-				display: block;
-				transition: transform 0.3s ease;
-			}
-			&:hover img {
-				transform: scale(1.05);
-			}
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+		&:hover img {
+			transform: scale(1.05);
 		}
 	}
 }
