@@ -1,0 +1,191 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.projects-page {
+	padding-top: 100px;
+	p {
+		text-align: justify;
+		font-size: rem(16px);
+		@include mq(lg) {
+			font-size: rem(20px);
+		}
+		@include mq(xl) {
+			text-wrap: balance;
+			text-align: left;
+		}
+	}
+	& .title,
+	.subtitle {
+		text-align: left;
+	}
+	& .title {
+		font-size: rem(30px);
+		@include mq(lg) {
+			font-size: rem(48px);
+		}
+	}
+	& nav {
+		margin-block: 75px;
+		margin-inline: auto;
+		max-width: 775px;
+		padding-bottom: 30px;
+		border-bottom: 5px solid $white;
+		& a {
+			font-weight: inherit;
+		}
+		& select {
+			display: block;
+			width: 100%;
+			@include mq(md) {
+				display: none;
+			}
+		}
+		& ul {
+			display: none;
+			gap: 11px;
+			margin-inline: auto;
+			width: fit-content;
+			font-size: rem(12px);
+			@include mq(md) {
+				display: flex;
+				gap: 38px;
+				font-size: rem(16px);
+			}
+			& li {
+				color: $white-unfocused;
+				cursor: pointer;
+				text-align: center;
+				&.active {
+					color: $white;
+				}
+			}
+		}
+	}
+	& section {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 135px;
+		gap: 40px;
+		text-align: left;
+		&:nth-child(2n) {
+			flex-direction: column-reverse;
+		}
+		@include mq(xl) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&--vi {
+		margin-bottom: 100px !important;
+		row-gap: 10px !important;
+		& > div:nth-child(2n) {
+			justify-self: center;
+		}
+		@include mq(xl) {
+			& > div:nth-child(2n) {
+				justify-self: flex-end;
+			}
+		}
+	}
+	& h2 {
+		font-size: rem(30px);
+		text-align: center;
+		margin-bottom: 75px;
+		font-weight: 700;
+		@include mq(lg) {
+			font-size: rem(40px);
+		}
+	}
+	& h3 {
+		color: $blue;
+		font-size: rem(32px);
+		font-weight: 700;
+		margin-bottom: 18px;
+		@include mq(lg) {
+			font-size: rem(40px);
+		}
+	}
+	& p {
+		margin-bottom: 25px;
+	}
+	& a {
+		font-weight: bold;
+	}
+
+	& .swiper {
+		position: relative;
+		justify-self: end;
+		width: 100%;
+		max-width: 90vw;
+		@include mq(sm) {
+			max-width: 540px;
+		}
+		@include mq(md) {
+			max-width: 720px;
+		}
+		@include mq(lg) {
+			max-width: 960px;
+		}
+		@include mq(xl) {
+			max-width: 640px;
+		}
+	}
+	& .swiper-slide {
+		display: flex;
+		justify-content: center;
+	}
+	& .swiper-wrapper {
+		align-items: flex-end;
+	}
+	& .arrows {
+		margin-top: 10px;
+		display: flex;
+		gap: 15px;
+		grid-column: 2;
+		justify-self: center;
+		& .disabled {
+			color: $white-unfocused;
+			cursor: default !important;
+		}
+		& .arrow {
+			font-family: Math;
+			user-select: none;
+			cursor: pointer;
+			font-size: 40px;
+		}
+	}
+}
+
+.gallery {
+	margin-bottom: 100px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4px;
+	@include mq(lg) {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	& a {
+		aspect-ratio: 154/205;
+		width: 100%;
+		padding-bottom: 100%;
+		position: relative;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+		&:hover img {
+			transform: scale(1.05);
+		}
+	}
+}

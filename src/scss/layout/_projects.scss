@@ -1,0 +1,56 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.projects {
+	padding: 55px 0 60px 0;
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		& > p {
+			text-align: center;
+			font-size: rem(18px);
+			@include mq(md) {
+				font-size: rem(22px);
+			}
+			& a {
+				color: $blue;
+			}
+		}
+	}
+	.project {
+		max-width: 776px;
+		margin-inline: auto;
+		&--text-wrapper {
+			position: relative;
+			padding: 28px 56px;
+			@include mq(sm) {
+				padding: 28px 78px;
+			}
+			@include mq(md) {
+				padding: 42px 151px;
+			}
+		}
+		&--title {
+			position: absolute;
+			font-size: rem(22px);
+			font-weight: 600;
+			background: linear-gradient(90deg, $blue 0%, $dark-blue-1 100%);
+			width: 264px;
+			top: -24px;
+			left: 0;
+			right: 0;
+			margin-inline: auto;
+			text-align: center;
+			padding-block: 10px;
+		}
+		&--text {
+			font-size: rem(16px);
+			font-weight: 500;
+			text-align: center;
+			@include mq(lg) {
+				font-size: rem(22px);
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.hero {
+	padding: 50px 0 50px 0;
+	height: calc(100dvh - 128px);
+	display: flex;
+	align-items: center;
+	&--container {
+		position: relative;
+		display: grid;
+		@include mq(md) {
+			grid-template-columns: 14ch 1fr;
+			font-size: rem(35px);
+		}
+		@include mq(lg) {
+			font-size: rem(40px);
+		}
+		@include mq(xl) {
+			font-size: rem(48px);
+		}
+	}
+	&--title {
+		text-align: center;
+		font-size: rem(30px);
+		font-weight: 600;
+		margin-bottom: 50px;
+		@include mq(md) {
+			margin-bottom: 0px;
+			text-align: initial;
+			position: absolute;
+			max-width: 14ch;
+			font-size: rem(35px);
+			top: 60px;
+		}
+		@include mq(lg) {
+			font-size: rem(40px);
+			top: 120px;
+		}
+		@include mq(xl) {
+			font-size: rem(48px);
+		}
+	}
+	&--img {
+		display: none;
+		justify-self: end;
+		grid-column: 2;
+		@include mq(md) {
+			display: block;
+			max-height: 100%;
+			max-width: 500px;
+			width: 100%;
+		}
+		@include mq(xxl) {
+			max-width: 640px;
+		}
+	}
+	&--highlight {
+		border-radius: 50%;
+		border: 5px solid $dark-blue-2;
+		width: fit-content;
+		margin-inline: auto;
+		transform: translateY(-5px);
+		@include mq(md) {
+			margin: 0;
+		}
+	}
+	&--btn {
+		font-size: rem(16px);
+
+		@include mq(xs) {
+			margin-inline: auto;
+		}
+		@include mq(md) {
+			position: absolute;
+			top: 280px;
+		}
+		@include mq(lg) {
+			top: 366px;
+		}
+	}
+}

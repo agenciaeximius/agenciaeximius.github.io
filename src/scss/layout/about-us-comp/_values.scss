@@ -1,0 +1,41 @@
+@use '../../utilities/' as *;
+
+.values {
+	h3 {
+		font-size: rem(26px);
+		font-weight: 600;
+		margin-bottom: 16px;
+		@include mq(sm) {
+			font-size: rem(32px);
+		}
+	}
+	p {
+		font-size: rem(16px);
+		text-wrap: balance;
+		font-weight: 600;
+		@include mq(lg) {
+			font-size: rem(20px);
+		}
+	}
+	ul {
+		display: flex;
+		margin-top: 25px;
+		width: 100%;
+		flex-direction: column;
+		gap: 45px;
+	}
+	li {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		@include mq(sm) {
+			gap: 40px;
+		}
+		img {
+			max-width: 50px;
+			@include mq(sm) {
+				max-width: 100%;
+			}
+		}
+	}
+}

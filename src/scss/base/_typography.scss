@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.title {
+	font-family: $title-font-family, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: rem(36px);
+	text-align: center;
+	@include mq(sm) {
+		font-size: rem(48px);
+	}
+}
+
+.subtitle {
+	margin-bottom: 25px;
+	text-align: center;
+	letter-spacing: 5.6px;
+	font-weight: 600;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+p,
+h2,
+h3,
+h4,
+li {
+	font-family: $default-font-family;
+	font-style: normal;
+}

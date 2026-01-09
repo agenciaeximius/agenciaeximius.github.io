@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+.button {
+	display: block;
+	width: fit-content;
+	min-height: 50px;
+	font-weight: 600;
+	padding: 15px 23px;
+	background: linear-gradient(90deg, $blue 0%, $dark-blue-1 100%);
+	color: $white;
+}

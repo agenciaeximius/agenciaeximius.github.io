@@ -1,0 +1,63 @@
+@use '../../abstracts/' as *;
+@use '../../utilities/' as *;
+
+$size-lg: 350px;
+$size-md: 200px;
+
+.team {
+	height: calc($size-md + 85px + 35px);
+	position: relative;
+	@media only screen and (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		align-items: center;
+		height: 100%;
+	}
+	@include mq(lg) {
+		height: calc($size-lg + 85px + 35px);
+	}
+	.fig {
+		display: inline-block;
+		position: absolute;
+		&:nth-child(1) {
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+		&:nth-child(2) {
+			right: 0;
+			top: 0;
+		}
+		p {
+			color: $white;
+			font-family: $default-font-family;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 5.6px;
+			font-weight: 600;
+			font-size: rem(16px);
+		}
+		@media only screen and (max-width: 500px) {
+			position: initial;
+		}
+	}
+	.img-container {
+		position: relative;
+		overflow: hidden;
+		height: $size-md;
+		aspect-ratio: 1;
+		margin-bottom: 15px;
+
+		@include mq(lg) {
+			height: $size-lg;
+		}
+	}
+	img {
+		position: absolute;
+		top: 0;
+		width: $size-lg;
+		height: auto;
+		display: block;
+	}
+}

@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.latim {
+	text-align: center;
+	padding-block: 50px;
+	color: $black;
+	.subtitle {
+		margin-bottom: 0;
+	}
+	&--title {
+		font-size: rem(72px);
+		font-family: $latim-font-family;
+		font-optical-sizing: auto;
+		font-weight: 700;
+		font-style: italic;
+		color: $blue;
+		margin-bottom: 22px;
+	}
+
+	&--adj {
+		font-weight: 600;
+		font-size: rem(20px);
+		margin-bottom: 5px;
+	}
+	&--sig {
+		font-weight: 700;
+		font-size: rem(24px);
+	}
+}

@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.cta {
+	text-align: center;
+	padding-block: 50px;
+	color: $black;
+	.title {
+		max-width: 20ch;
+		display: inline-block;
+		margin: 20px 0 32px 0;
+		color: $blue;
+		font-size: rem(26px);
+		@include mq(lg) {
+			font-size: 36px;
+		}
+	}
+	&--desc {
+		font-size: rem(20px);
+		font-weight: 700;
+		margin-bottom: 35px;
+	}
+	a {
+		margin-inline: auto;
+	}
+}

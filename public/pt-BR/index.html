@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Serviços digitais de criação de websites, social medias e outros." />
+		<meta name="keywords" content="eximius, design, site, websites, social media, identidade visual, cartão de visita, ui/ux, cardapio" />
+		<meta name="author" content="Igor Marinho, Vinícius Davi" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Eximius Tech</title>
+		<style>
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 400;
+				font-style: normal;
+				font-display: block;
+				src: url('../assets/font/Montserrat-Regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 500;
+				font-style: normal;
+				font-display: block;
+				src: url('../assets/font/Montserrat-Medium.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 600;
+				font-style: normal;
+				font-display: block;
+				src: url('../assets/font/Montserrat-SemiBold.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 700;
+				font-style: normal;
+				font-display: block;
+				src: url('../assets/font/Montserrat-Bold.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				font-weight: 900;
+				font-style: normal;
+				font-display: block;
+				src: url('../assets/font/Montserrat-Black.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Monument Extended';
+				font-style: normal;
+				font-display: block;
+				src: url('../assets/font/PPMonumentExtended-Regular.woff2') format('woff2');
+			}
+			@font-face {
+				font-family: 'Playfair Display';
+				font-weight: 700;
+				font-style: italic;
+				src: url('../assets/font/PlayfairDisplay-BoldItalic.woff2') format('woff2');
+			}
+		</style>
+
+		<link rel="canonical" href="https://eximiustech.com.br/pt-BR" />
+		<link rel="alternate" hreflang="pt-BR" href="https://eximiustech.com.br/pt-BR" />
+		<link rel="alternate" hreflang="en-US" href="https://eximiustech.com.br/en-US" />
+		<link rel="alternate" hreflang="x-default" href="https://eximiustech.com.br/en-US" />
+
+		<link rel="stylesheet" href="../css/style.min.css" />
+		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="parallax">
+			<header class="header">
+				<nav class="container header--nav" aria-label="Navegação principal do cabeçalho">
+					<ul class="header--list">
+						<li><a href="#home" class="header--link header--home">Início</a></li>
+						<li><a href="#about" class="header--link header--about-us">Sobre nós</a></li>
+						<li><a href="#services" class="header--link header--services">Serviços</a></li>
+					</ul>
+
+					<img src="../assets/logo.webp" class="header--logo" alt="Logotipo da Eximius" />
+
+					<ul class="header--list">
+						<li><a href="#projects" class="header--link header--projetcs" aria-label="Ir até a seção de 'Projetos'">Projetos</a></li>
+						<li><a href="#contact" class="header--link header--contact button" aria-label="Ir até a seção de 'Fale conosco'">Fale conosco</a></li>
+
+						<nav class="lang" aria-label="Alterar idioma">
+							<div class="lang--selected br" aria-label="O idioma atual é português / The current language is portuguese"></div>
+							<ul class="lang--menu">
+								<li>
+									<a class="lang--item us" href="../en-US" aria-label="Mudar idioma para inglês / Change language to english">Inglês</a>
+								</li>
+								<li>
+									<p class="lang--item br" aria-label="Português já é o idioma selecionado / Portuguese already is the language selected">Português</p>
+								</li>
+							</ul>
+						</nav>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="hero" id="home">
+				<div class="container hero--container">
+					<div class="hero--content" role="region">
+						<h1 class="title hero--title">
+							Te ajudamos a se destacar no
+							<div class="hero--highlight">mundo digital.</div>
+						</h1>
+						<a href="#contact" class="hero--btn uppercase button" aria-label="Ir até a seção de 'Contato'">Comece um projeto personalizado</a>
+					</div>
+					<img src="../assets/saly.webp" class="hero--img" alt="Imagem meramente ilustrativa" />
+				</div>
+			</section>
+			<a class="down" href="#about" aria-label="Descer página até a seção 'Sobre nós'" role="button"><span></span></a>
+		</div>
+
+		<section class="about" id="about">
+			<div class="container">
+				<p class="uppercase subtitle autoShow">Conheça a Eximius</p>
+				<h1 class="title autoShow">Sobre nós</h1>
+				<article class="autoShow">
+					<aside class="about--aside">
+						<nav aria-label="Exibir diferentes conteúdos sobre nós">
+							<ul aria-controls="about--content">
+								<li class="about--btn" data-btn="team-pt">Time</li>
+								<li class="about--btn" data-btn="values-pt">Valores</li>
+								<li class="about--btn" data-btn="segments-pt">Segmentos</li>
+								<li class="about--btn" data-btn="methodology-pt">Metodologia</li>
+							</ul>
+						</nav>
+					</aside>
+					<nav class="about--menu" aria-label="Exibir diferentes conteúdos sobre nós">
+						<select class="about--select" id="about--select" name="about--select" aria-controls="about--content">
+							<option value="team-pt">Time</option>
+							<option value="values-pt">Valores</option>
+							<option value="segments-pt">Segmentos</option>
+							<option value="methodology-pt">Metodologia</option>
+						</select>
+					</nav>
+
+					<div class="about--content" id="about--content" aria-live="polite" role="region"></div>
+				</article>
+			</div>
+		</section>
+
+		<section class="latim">
+			<div class="container">
+				<p class="uppercase subtitle autoShow">Do latim</p>
+				<h1 class="latim--title autoShow">Eximius.</h1>
+				<p class="latim--adj autoShow">Adjetivo — Sentido próprio</p>
+				<p class="latim--sig autoShow">Excelente, superior, notável, sem igual, raro.</p>
+			</div>
+		</section>
+
+		<section class="services" id="services">
+			<div class="container">
+				<p class="uppercase subtitle autoShow">O que fazemos</p>
+				<h1 class="title autoShow">Serviços</h1>
+
+				<div class="services--grid autoShow">
+					<nav aria-label="Exibir diferentes conteúdos sobre nossos serviços">
+						<select class="services--menu" id="services--menu" name="services--menu" aria-controls="services--content">
+							<option value="site-pt">Criação de Websites</option>
+							<option value="social-media-pt">Social Media Design</option>
+							<option value="identity-pt">Identidade Visual</option>
+							<option value="card-pt">Cartão de Visita Digital</option>
+							<option value="dig-menu-pt">Cardápio Digital</option>
+							<option value="ux-pt">UI/UX Design</option>
+						</select>
+						<ul aria-controls="services--content">
+							<li class="services--btn" data-btn="site-pt">
+								<img src="../assets/services/website-m.svg" alt="" />
+								Criação de Websites
+							</li>
+							<li class="services--btn" data-btn="social-media-pt">
+								<img src="../assets/services/social-media-m.svg" alt="" />
+								Social Media Design
+							</li>
+							<li class="services--btn" data-btn="identity-pt">
+								<img src="../assets/services/identity-m.svg" alt="" />
+								Identidade Visual
+							</li>
+							<li class="services--btn" data-btn="card-pt">
+								<img src="../assets/services/card-m.svg" alt="" />
+								Cartão de Visita Digital
+							</li>
+							<li class="services--btn" data-btn="ux-pt">
+								<img src="../assets/services/ux-m.svg" alt="" />
+								UI/UX Design
+							</li>
+							<li class="services--btn" data-btn="dig-menu-pt">
+								<img src="../assets/services/dig-menu-m.svg" alt="" />
+								Cardápio Digital
+							</li>
+						</ul>
+					</nav>
+
+					<div class="services--content" id="services--content" aria-live="polite" role="region"></div>
+
+					<figure aria-live="polite" role="region"></figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta">
+			<div class="container">
+				<p class="uppercase subtitle autoShow">Tecnologia a serviço da inovação</p>
+				<h1 class="title autoShow">Design impactante, projetos envolventes</h1>
+				<p class="cta--desc autoShow">Fale conosco e comece a agregar valor a seu negócio com uma presença digital marcante.</p>
+				<a href="#contact" class="uppercase button autoShow" aria-label="Ir até a seção de 'Fale conosco'">Fale conosco</a>
+			</div>
+		</section>
+
+		<section class="projects" id="projects">
+			<div class="container">
+				<div class="autoShow">
+					<p class="uppercase subtitle">Entregas selecionadas</p>
+					<h1 class="title">Projetos</h1>
+				</div>
+
+				<p class="autoShow">Clique <a href="./projetos">aqui</a> e veja mais sobre os projetos criados</p>
+
+				<div class="project autoShow">
+					<img class="project--img" src="../assets/projects/websites.webp" alt="Print de 4 diferentes websites" />
+					<div class="project--text-wrapper">
+						<h2 class="uppercase project--title">Websites</h2>
+						<p class="project--text">Conte conosco para o desenvolvimento de seu website para impulsionar seu negócio com tecnologia e profissionalismo.</p>
+					</div>
+				</div>
+				<div class="project autoShow">
+					<img class="project--img" src="../assets/projects/social-media.webp" alt="Diversas artes para redes sociais" />
+					<div class="project--text-wrapper">
+						<h2 class="uppercase project--title">Social Media</h2>
+						<p class="project--text">Somos especialistas na produção de artes para se destacar nas redes sociais com qualidade, garantindo sua presença digital.</p>
+					</div>
+				</div>
+				<div class="project autoShow">
+					<img class="project--img" src="../assets/projects/brand-identity.webp" alt="Diversas identidades visuais" />
+					<div class="project--text-wrapper">
+						<h2 class="uppercase project--title">Identidade visual</h2>
+						<p class="project--text">Criamos identidades visuais únicas e inovadoras que representam os valores de seu negócio para seu público.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-us" id="contact">
+			<div class="container">
+				<p class="uppercase subtitle autoShow">Tire seu projeto do papel</p>
+				<h1 class="title autoShow">Fale conosco</h1>
+
+				<div class="contact-us--info autoShow">
+					<p>Ficaremos gratos em trabalhar de modo colaborativo para a entrega de excelentes projetos.</p>
+					<hr />
+					<ul class="contact-us--contacts">
+						<li>
+							<svg width="50" height="48" viewBox="0 0 50 48" xmlns="http://www.w3.org/2000/svg">
+								<path
+									id="wpp"
+									d="M50 22.9227C50 35.5827 39.0117 45.8454 25.4544 45.8454C21.3071 45.8517 17.2255 44.8705 13.5894 42.9932L0 47.0574L4.43056 34.7587C2.12136 31.1936 0.902525 27.0979 0.908333 22.9227C0.908333 10.2627 11.8978 0 25.455 0C39.0128 0 50 10.2627 50 22.9227ZM25.4544 3.6506C14.0744 3.6506 4.81778 12.2961 4.81778 22.9227C4.81778 27.1401 6.27833 31.0453 8.74889 34.2222L6.17056 41.3791L14.1011 39.0069C17.473 41.0918 21.4205 42.2002 25.455 42.1948C36.8333 42.1948 46.0917 33.5503 46.0917 22.9232C46.0911 12.2966 36.8339 3.6506 25.4544 3.6506ZM37.8494 28.202C37.6978 27.9683 37.2972 27.8271 36.6961 27.5463C36.0939 27.2656 33.135 25.9056 32.585 25.7195C32.0333 25.5318 31.6311 25.4376 31.2306 25.9997C30.83 26.5623 29.6767 27.8271 29.325 28.202C28.9739 28.5779 28.6233 28.625 28.0211 28.3437C27.42 28.0629 25.4817 27.4689 23.1833 25.5548C21.395 24.0662 20.1872 22.2273 19.8361 21.6647C19.4856 21.1026 19.7994 20.7988 20.1 20.5191C20.3711 20.2671 20.7022 19.8629 21.0028 19.5351C21.3044 19.2067 21.4044 18.973 21.6039 18.5976C21.8056 18.2227 21.705 17.8949 21.5539 17.613C21.4039 17.3323 20.1994 14.5674 19.6983 13.4427C19.1972 12.318 18.6967 12.5052 18.345 12.5052C17.9944 12.5052 17.5928 12.4582 17.1917 12.4582C16.7906 12.4582 16.1383 12.5988 15.5867 13.1609C15.0356 13.7235 13.4817 15.0829 13.4817 17.8473C13.4817 20.6122 15.6367 23.2835 15.9383 23.6583C16.2389 24.0327 20.0994 29.8908 26.2161 32.1407C32.3333 34.389 32.3333 33.6387 33.4367 33.5446C34.5389 33.451 36.9956 32.1857 37.4989 30.8743C37.9989 29.5609 37.9989 28.4362 37.8494 28.202Z" />
+							</svg>
+							<a href="https://wa.me/5511993224560" target="_blank" aria-label="Telefone de contato">(11) 99322-4560</a>
+						</li>
+						<li>
+							<svg width="46" height="33" viewBox="0 0 46 33" xmlns="http://www.w3.org/2000/svg">
+								<path
+									id="email"
+									d="M45.8983 1.3894C45.859 1.28813 45.8095 1.19099 45.7504 1.09947C45.7269 1.03875 45.6995 0.979565 45.6683 0.922293C45.5154 0.773455 45.3443 0.643624 45.1591 0.535722L44.8798 0.439079H1.54725C1.43259 0.427208 1.31697 0.427208 1.2023 0.439079L0.923055 0.535722C0.836146 0.582029 0.753679 0.635938 0.676661 0.696794C0.587651 0.758406 0.505113 0.828549 0.430266 0.906187C0.399001 0.963438 0.371566 1.02262 0.348135 1.08336C0.174413 1.25622 0.0547238 1.47418 0.0031826 1.71154C-0.00106087 1.77591 -0.00106087 1.84047 0.0031826 1.90483V30.8977C0.0031826 31.3249 0.176245 31.7346 0.484298 32.0366C0.79235 32.3387 1.21016 32.5084 1.64581 32.5084H44.3542C44.7898 32.5084 45.2076 32.3387 45.5157 32.0366C45.8238 31.7346 45.9968 31.3249 45.9968 30.8977V1.90483C46.0011 1.84047 46.0011 1.77591 45.9968 1.71154C45.9755 1.60109 45.9425 1.49312 45.8983 1.3894ZM39.5249 3.51554L23 15.9825L6.47514 3.51554H39.5249ZM42.7116 29.287H3.28844V5.12626L21.998 19.2361C22.2852 19.4529 22.6375 19.5705 23 19.5705C23.3625 19.5705 23.7148 19.4529 24.002 19.2361L42.7116 5.12626V29.287Z" />
+							</svg>
+							<a href="mailto:contato@eximiustech.com.br" aria-label="Email para contato">contato@eximiustech.com.br </a>
+						</li>
+						<li>
+							<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+								<path
+									id="insta"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M13.5 0.307617C9.91958 0.307617 6.4858 1.69021 3.95406 4.15123C1.42232 6.61225 0 9.95012 0 13.4305V30.9278C0 34.4082 1.42232 37.746 3.95406 40.2071C6.4858 42.6681 9.91958 44.0507 13.5 44.0507H31.5C35.0804 44.0507 38.5142 42.6681 41.0459 40.2071C43.5777 37.746 45 34.4082 45 30.9278V13.4305C45 9.95012 43.5777 6.61225 41.0459 4.15123C38.5142 1.69021 35.0804 0.307617 31.5 0.307617H13.5ZM3 13.4305C3 7.79254 7.7 3.22382 13.5 3.22382H31.5C37.3 3.22382 42 7.79254 42 13.4305V30.9278C42 36.5657 37.3 41.1345 31.5 41.1345H13.5C10.7152 41.1345 8.04451 40.0591 6.07538 38.145C4.10625 36.2309 3 33.6347 3 30.9278V13.4305ZM37.5 11.0004C37.5 11.6449 37.2366 12.263 36.7678 12.7188C36.2989 13.1745 35.663 13.4305 35 13.4305C34.337 13.4305 33.7011 13.1745 33.2322 12.7188C32.7634 12.263 32.5 11.6449 32.5 11.0004C32.5 10.3558 32.7634 9.73772 33.2322 9.28197C33.7011 8.82623 34.337 8.57019 35 8.57019C35.663 8.57019 36.2989 8.82623 36.7678 9.28197C37.2366 9.73772 37.5 10.3558 37.5 11.0004ZM22.5 13.9166C21.3838 13.9166 20.2785 14.1303 19.2472 14.5455C18.2159 14.9608 17.2789 15.5694 16.4896 16.3366C15.7003 17.1039 15.0742 18.0147 14.647 19.0172C14.2199 20.0197 14 21.0941 14 22.1791C14 23.2642 14.2199 24.3386 14.647 25.3411C15.0742 26.3436 15.7003 27.2544 16.4896 28.0217C17.2789 28.7889 18.2159 29.3975 19.2472 29.8128C20.2785 30.228 21.3838 30.4417 22.5 30.4417C24.7543 30.4417 26.9163 29.5712 28.5104 28.0217C30.1045 26.4721 31 24.3705 31 22.1791C31 19.9878 30.1045 17.8862 28.5104 16.3366C26.9163 14.7871 24.7543 13.9166 22.5 13.9166ZM11 22.1791C11 19.2143 12.2116 16.371 14.3683 14.2746C16.5249 12.1781 19.45 11.0004 22.5 11.0004C25.55 11.0004 28.4751 12.1781 30.6317 14.2746C32.7884 16.371 34 19.2143 34 22.1791C34 25.1439 32.7884 27.9873 30.6317 30.0837C28.4751 32.1802 25.55 33.3579 22.5 33.3579C19.45 33.3579 16.5249 32.1802 14.3683 30.0837C12.2116 27.9873 11 25.1439 11 22.1791Z" />
+							</svg>
+							<a href="https://www.instagram.com/eximius.tech/" target="_blank" aria-label="Instagram para contato">@eximius.tech</a>
+						</li>
+					</ul>
+				</div>
+
+				<form class="contact-us--form">
+					<label for="name">Nome completo:</label>
+					<input class="contact-us--input" type="text" id="name" name="name" autocomplete="name" required />
+					<label for="e-mail">E-mail:</label>
+					<input class="contact-us--input" type="email" id="e-mail" name="e-mail" autocomplete="email" required />
+					<label for="tel">Telefone/WhatsApp com DDD:</label>
+					<input class="contact-us--input" type="tel" id="tel" name="tel" autocomplete="tel-national" required />
+					<label for="msg">Mensagem:</label>
+					<textarea class="contact-us--input" id="msg" name="msg" required></textarea>
+					<button type="submit" class="uppercase button">Enviar</button>
+				</form>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<img src="../assets/logo.webp" class="footer--logo" alt="Logotipo da Eximius" />
+				<div>
+					<h1 class="footer--title uppercase">Links</h1>
+					<nav aria-label="Navegação do rodapé">
+						<ul>
+							<li class="uppercase"><a href="#home">Início</a></li>
+							<li class="uppercase"><a href="#about">Sobre nós</a></li>
+							<li class="uppercase"><a href="#services">Serviços</a></li>
+							<li class="uppercase"><a href="#projects">Projetos</a></li>
+							<li class="uppercase"><a href="#contact">Fale Conosco</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div>
+					<h1 class="footer--title uppercase">Redes sociais</h1>
+					<ul>
+						<li>
+							<svg viewBox="0 0 50 48" xmlns="http://www.w3.org/2000/svg">
+								<path
+									id="wpp"
+									d="M50 22.9227C50 35.5827 39.0117 45.8454 25.4544 45.8454C21.3071 45.8517 17.2255 44.8705 13.5894 42.9932L0 47.0574L4.43056 34.7587C2.12136 31.1936 0.902525 27.0979 0.908333 22.9227C0.908333 10.2627 11.8978 0 25.455 0C39.0128 0 50 10.2627 50 22.9227ZM25.4544 3.6506C14.0744 3.6506 4.81778 12.2961 4.81778 22.9227C4.81778 27.1401 6.27833 31.0453 8.74889 34.2222L6.17056 41.3791L14.1011 39.0069C17.473 41.0918 21.4205 42.2002 25.455 42.1948C36.8333 42.1948 46.0917 33.5503 46.0917 22.9232C46.0911 12.2966 36.8339 3.6506 25.4544 3.6506ZM37.8494 28.202C37.6978 27.9683 37.2972 27.8271 36.6961 27.5463C36.0939 27.2656 33.135 25.9056 32.585 25.7195C32.0333 25.5318 31.6311 25.4376 31.2306 25.9997C30.83 26.5623 29.6767 27.8271 29.325 28.202C28.9739 28.5779 28.6233 28.625 28.0211 28.3437C27.42 28.0629 25.4817 27.4689 23.1833 25.5548C21.395 24.0662 20.1872 22.2273 19.8361 21.6647C19.4856 21.1026 19.7994 20.7988 20.1 20.5191C20.3711 20.2671 20.7022 19.8629 21.0028 19.5351C21.3044 19.2067 21.4044 18.973 21.6039 18.5976C21.8056 18.2227 21.705 17.8949 21.5539 17.613C21.4039 17.3323 20.1994 14.5674 19.6983 13.4427C19.1972 12.318 18.6967 12.5052 18.345 12.5052C17.9944 12.5052 17.5928 12.4582 17.1917 12.4582C16.7906 12.4582 16.1383 12.5988 15.5867 13.1609C15.0356 13.7235 13.4817 15.0829 13.4817 17.8473C13.4817 20.6122 15.6367 23.2835 15.9383 23.6583C16.2389 24.0327 20.0994 29.8908 26.2161 32.1407C32.3333 34.389 32.3333 33.6387 33.4367 33.5446C34.5389 33.451 36.9956 32.1857 37.4989 30.8743C37.9989 29.5609 37.9989 28.4362 37.8494 28.202Z" />
+							</svg>
+							<a href="https://wa.me/5511993224560" target="_blank">(11) 99322-4560</a>
+						</li>
+						<li>
+							<svg viewBox="0 0 46 33" xmlns="http://www.w3.org/2000/svg">
+								<path
+									id="email"
+									d="M45.8983 1.3894C45.859 1.28813 45.8095 1.19099 45.7504 1.09947C45.7269 1.03875 45.6995 0.979565 45.6683 0.922293C45.5154 0.773455 45.3443 0.643624 45.1591 0.535722L44.8798 0.439079H1.54725C1.43259 0.427208 1.31697 0.427208 1.2023 0.439079L0.923055 0.535722C0.836146 0.582029 0.753679 0.635938 0.676661 0.696794C0.587651 0.758406 0.505113 0.828549 0.430266 0.906187C0.399001 0.963438 0.371566 1.02262 0.348135 1.08336C0.174413 1.25622 0.0547238 1.47418 0.0031826 1.71154C-0.00106087 1.77591 -0.00106087 1.84047 0.0031826 1.90483V30.8977C0.0031826 31.3249 0.176245 31.7346 0.484298 32.0366C0.79235 32.3387 1.21016 32.5084 1.64581 32.5084H44.3542C44.7898 32.5084 45.2076 32.3387 45.5157 32.0366C45.8238 31.7346 45.9968 31.3249 45.9968 30.8977V1.90483C46.0011 1.84047 46.0011 1.77591 45.9968 1.71154C45.9755 1.60109 45.9425 1.49312 45.8983 1.3894ZM39.5249 3.51554L23 15.9825L6.47514 3.51554H39.5249ZM42.7116 29.287H3.28844V5.12626L21.998 19.2361C22.2852 19.4529 22.6375 19.5705 23 19.5705C23.3625 19.5705 23.7148 19.4529 24.002 19.2361L42.7116 5.12626V29.287Z" />
+							</svg>
+							<a href="mailto:contato@eximiustech.com.br">contato@eximiustech.com.br</a>
+						</li>
+						<li>
+							<svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+								<path
+									id="insta"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M13.5 0.307617C9.91958 0.307617 6.4858 1.69021 3.95406 4.15123C1.42232 6.61225 0 9.95012 0 13.4305V30.9278C0 34.4082 1.42232 37.746 3.95406 40.2071C6.4858 42.6681 9.91958 44.0507 13.5 44.0507H31.5C35.0804 44.0507 38.5142 42.6681 41.0459 40.2071C43.5777 37.746 45 34.4082 45 30.9278V13.4305C45 9.95012 43.5777 6.61225 41.0459 4.15123C38.5142 1.69021 35.0804 0.307617 31.5 0.307617H13.5ZM3 13.4305C3 7.79254 7.7 3.22382 13.5 3.22382H31.5C37.3 3.22382 42 7.79254 42 13.4305V30.9278C42 36.5657 37.3 41.1345 31.5 41.1345H13.5C10.7152 41.1345 8.04451 40.0591 6.07538 38.145C4.10625 36.2309 3 33.6347 3 30.9278V13.4305ZM37.5 11.0004C37.5 11.6449 37.2366 12.263 36.7678 12.7188C36.2989 13.1745 35.663 13.4305 35 13.4305C34.337 13.4305 33.7011 13.1745 33.2322 12.7188C32.7634 12.263 32.5 11.6449 32.5 11.0004C32.5 10.3558 32.7634 9.73772 33.2322 9.28197C33.7011 8.82623 34.337 8.57019 35 8.57019C35.663 8.57019 36.2989 8.82623 36.7678 9.28197C37.2366 9.73772 37.5 10.3558 37.5 11.0004ZM22.5 13.9166C21.3838 13.9166 20.2785 14.1303 19.2472 14.5455C18.2159 14.9608 17.2789 15.5694 16.4896 16.3366C15.7003 17.1039 15.0742 18.0147 14.647 19.0172C14.2199 20.0197 14 21.0941 14 22.1791C14 23.2642 14.2199 24.3386 14.647 25.3411C15.0742 26.3436 15.7003 27.2544 16.4896 28.0217C17.2789 28.7889 18.2159 29.3975 19.2472 29.8128C20.2785 30.228 21.3838 30.4417 22.5 30.4417C24.7543 30.4417 26.9163 29.5712 28.5104 28.0217C30.1045 26.4721 31 24.3705 31 22.1791C31 19.9878 30.1045 17.8862 28.5104 16.3366C26.9163 14.7871 24.7543 13.9166 22.5 13.9166ZM11 22.1791C11 19.2143 12.2116 16.371 14.3683 14.2746C16.5249 12.1781 19.45 11.0004 22.5 11.0004C25.55 11.0004 28.4751 12.1781 30.6317 14.2746C32.7884 16.371 34 19.2143 34 22.1791C34 25.1439 32.7884 27.9873 30.6317 30.0837C28.4751 32.1802 25.55 33.3579 22.5 33.3579C19.45 33.3579 16.5249 32.1802 14.3683 30.0837C12.2116 27.9873 11 25.1439 11 22.1791Z" />
+							</svg>
+							<a href="https://www.instagram.com/eximius.tech/" target="_blank">@eximius.tech</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="../js/script.min.js"></script>
+	</body>
+</html>

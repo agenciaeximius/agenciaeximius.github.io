@@ -1,0 +1,81 @@
+@forward './about-us-comp/';
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.about {
+	padding: 50px 0 100px 0;
+	.title {
+		margin-bottom: 33px;
+	}
+	&--aside {
+		display: none;
+		font-weight: 600;
+		border-left: 7px solid $white;
+		padding: 25px 0px 25px 15px;
+		width: 100%;
+		height: fit-content;
+		margin-inline: auto;
+		@include mq(md) {
+			display: block;
+		}
+		@include mq(sm) {
+			padding: 25px 0px 25px 30px;
+		}
+		@include mq(md) {
+			padding: 36px 25px;
+			margin: 0;
+			width: fit-content;
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+			li {
+				color: $white-unfocused;
+				cursor: pointer;
+				font-size: rem(12px);
+				&.active {
+					color: $white;
+				}
+				@include mq(sm) {
+					font-size: rem(16px);
+				}
+				@include mq(md) {
+					font-size: rem(20px);
+				}
+			}
+			@include mq(md) {
+				flex-direction: column;
+				justify-content: unset;
+				gap: 25px;
+			}
+		}
+	}
+	&--menu {
+		width: 100%;
+		@include mq(md) {
+			display: none;
+		}
+	}
+	h2 {
+		color: $blue;
+		font-size: rem(32px);
+		font-weight: 700;
+		margin-bottom: 27px;
+	}
+	article {
+		display: flex;
+		gap: 75px;
+		flex-direction: column;
+		.about--content > p {
+			font-size: rem(16px);
+			margin-bottom: 27px;
+			text-wrap: balance;
+			@include mq(lg) {
+				font-size: rem(20px);
+			}
+		}
+		@include mq(md) {
+			flex-direction: row;
+		}
+	}
+}
