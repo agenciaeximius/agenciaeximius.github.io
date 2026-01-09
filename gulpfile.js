@@ -9,7 +9,7 @@ import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 import replace from 'gulp-replace';
 import zip from 'gulp-zip';
-import gulpIf from 'gulp-if';
+import merge from 'merge-stream';
 
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -55,11 +55,11 @@ function gulpJS() {
 }
 
 function buildZip() {
-	return gulp
-		.src('./public/**/*')
-		.pipe(gulpIf('*.html', replace(/\.html(?=["'])/g, '')))
-		.pipe(zip('publicLive.zip'))
-		.pipe(gulp.dest('./'));
+	const htmlStream = gulp.src('./public/**/*.html').pipe(replace(/\.html(?=["'])/g, ''));
+
+	const assetsStream = gulp.src(['./public/**/*', '!./public/**/*.html'], { encoding: false });
+
+	return merge(htmlStream, assetsStream).pipe(zip('publicLive.zip')).pipe(gulp.dest('./'));
 }
 
 function sync(done) {
