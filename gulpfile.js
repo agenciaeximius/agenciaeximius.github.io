@@ -7,6 +7,7 @@ import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
+import replace from 'gulp-replace';
 
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -51,6 +52,17 @@ function gulpJS() {
 		.pipe(browserSync.stream());
 }
 
+function processHtmlLive() {
+	return gulp
+		.src('./public/**/*.html')
+		.pipe(replace(/\.html(?=["'])/g, ''))
+		.pipe(gulp.dest('./publicLive/'));
+}
+
+function copyAssetsLive() {
+	return gulp.src(['./public/**/*', '!./public/**/*.html']).pipe(gulp.dest('./publicLive/'));
+}
+
 function sync(done) {
 	browserSync.init({
 		server: {
@@ -67,3 +79,6 @@ function watch() {
 }
 
 export default gulp.parallel(sync, compileSass, gulpJS, watch);
+
+// gulp buildLive
+export const buildLive = gulp.series(gulp.parallel(compileSass, gulpJS), gulp.parallel(processHtmlLive, copyAssetsLive));
