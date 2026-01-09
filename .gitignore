@@ -21,4 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 public/config.php
-/publicLive
+
+publicLive.zip

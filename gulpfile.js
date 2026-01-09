@@ -8,6 +8,8 @@ import browserSync from 'browser-sync';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 import replace from 'gulp-replace';
+import zip from 'gulp-zip';
+import gulpIf from 'gulp-if';
 
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -52,15 +54,12 @@ function gulpJS() {
 		.pipe(browserSync.stream());
 }
 
-function processHtmlLive() {
+function buildZip() {
 	return gulp
-		.src('./public/**/*.html')
-		.pipe(replace(/\.html(?=["'])/g, ''))
-		.pipe(gulp.dest('./publicLive/'));
-}
-
-function copyAssetsLive() {
-	return gulp.src(['./public/**/*', '!./public/**/*.html']).pipe(gulp.dest('./publicLive/'));
+		.src('./public/**/*')
+		.pipe(gulpIf('*.html', replace(/\.html(?=["'])/g, '')))
+		.pipe(zip('publicLive.zip'))
+		.pipe(gulp.dest('./'));
 }
 
 function sync(done) {
@@ -80,5 +79,5 @@ function watch() {
 
 export default gulp.parallel(sync, compileSass, gulpJS, watch);
 
-// gulp buildLive
-export const buildLive = gulp.series(gulp.parallel(compileSass, gulpJS), gulp.parallel(processHtmlLive, copyAssetsLive));
+// gulp publicLive
+export const publicLive = gulp.series(gulp.parallel(compileSass, gulpJS), buildZip);
